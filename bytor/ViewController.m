@@ -27,11 +27,14 @@
     [tokenizer addTokenRecognizer: [[BYNumberRecognizer alloc] init]];
     [tokenizer addTokenRecognizer: [[BYKeywordRecognizer alloc] initWith: @"="]];
     [tokenizer addTokenRecognizer: [[BYKeywordRecognizer alloc] initWith: @";"]];
+    [tokenizer addTokenRecognizer: [[BYKeywordRecognizer alloc] initWith: @"{"]];
+    [tokenizer addTokenRecognizer: [[BYKeywordRecognizer alloc] initWith: @"}"]];
+    [tokenizer addTokenRecognizer: [[BYKeywordRecognizer alloc] initWith: @":"]];
     [tokenizer addTokenRecognizer: [[BYWordRecognizer alloc] init]];
     
     [tokenizer addIgnoredTokenRecognizers: [[BYWhiteSpaceRecognizer alloc] init]];
     
-    [tokenizer tokenize: @"hello = 10.59999;"];
+    [tokenizer tokenize: @"variable = 10.5; style{key:value}"];
 }
 
 - (void)didReceiveMemoryWarning {

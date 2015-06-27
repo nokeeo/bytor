@@ -15,6 +15,7 @@
     NSString *word = @"";
     NSScanner *scanner = [[NSScanner alloc] initWithString: text];
     [scanner setScanLocation: position];
+    [scanner setCharactersToBeSkipped: nil];
     
     //Word must start with a letter.  Scan for letters first.
     NSString *buffer = @"";
