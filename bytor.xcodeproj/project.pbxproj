@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE80D8DB1B3E5FCC001A0E91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D8DA1B3E5FCC001A0E91 /* main.m */; };
+		BE80D8DE1B3E5FCC001A0E91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D8DD1B3E5FCC001A0E91 /* AppDelegate.m */; };
+		BE80D8E11B3E5FCC001A0E91 /* bytor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE80D8DF1B3E5FCC001A0E91 /* bytor.xcdatamodeld */; };
+		BE80D8E41B3E5FCC001A0E91 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D8E31B3E5FCC001A0E91 /* ViewController.m */; };
+		BE80D8E71B3E5FCC001A0E91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE80D8E51B3E5FCC001A0E91 /* Main.storyboard */; };
+		BE80D8E91B3E5FCC001A0E91 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE80D8E81B3E5FCC001A0E91 /* Images.xcassets */; };
+		BE80D8EC1B3E5FCC001A0E91 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE80D8EA1B3E5FCC001A0E91 /* LaunchScreen.xib */; };
+		BE80D8F81B3E5FCC001A0E91 /* bytorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D8F71B3E5FCC001A0E91 /* bytorTests.m */; };
+		BE80D9041B3E608B001A0E91 /* BYTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D9031B3E608B001A0E91 /* BYTokenizer.m */; };
+		BE80D90B1B3E655A001A0E91 /* BYToken.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D90A1B3E655A001A0E91 /* BYToken.m */; };
+		BE80D9111B3E65D4001A0E91 /* BYKeywordToken.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D9101B3E65D4001A0E91 /* BYKeywordToken.m */; };
+		BE80D9141B3E6716001A0E91 /* BYKeywordRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D9131B3E6716001A0E91 /* BYKeywordRecognizer.m */; };
+		BE80D9171B3E7B63001A0E91 /* BYWordRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D9161B3E7B63001A0E91 /* BYWordRecognizer.m */; };
+		BE80D91A1B3E7B8A001A0E91 /* BYWordToken.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D9191B3E7B8A001A0E91 /* BYWordToken.m */; };
+		BE80D91D1B3E840F001A0E91 /* BYNumberRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D91C1B3E840F001A0E91 /* BYNumberRecognizer.m */; };
+		BE80D9201B3E844E001A0E91 /* BYNumberToken.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D91F1B3E844E001A0E91 /* BYNumberToken.m */; };
+		BE80D9231B3E9152001A0E91 /* BYWhiteSpaceToken.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D9221B3E9152001A0E91 /* BYWhiteSpaceToken.m */; };
+		BE80D9261B3E9179001A0E91 /* BYWhiteSpaceRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D9251B3E9179001A0E91 /* BYWhiteSpaceRecognizer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BE80D8F21B3E5FCC001A0E91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE80D8CD1B3E5FCC001A0E91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE80D8D41B3E5FCC001A0E91;
+			remoteInfo = bytor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BE80D8D51B3E5FCC001A0E91 /* bytor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bytor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE80D8D91B3E5FCC001A0E91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE80D8DA1B3E5FCC001A0E91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BE80D8DC1B3E5FCC001A0E91 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BE80D8DD1B3E5FCC001A0E91 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BE80D8E01B3E5FCC001A0E91 /* bytor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = bytor.xcdatamodel; sourceTree = "<group>"; };
+		BE80D8E21B3E5FCC001A0E91 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BE80D8E31B3E5FCC001A0E91 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BE80D8E61B3E5FCC001A0E91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BE80D8E81B3E5FCC001A0E91 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BE80D8EB1B3E5FCC001A0E91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		BE80D8F11B3E5FCC001A0E91 /* bytorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bytorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE80D8F61B3E5FCC001A0E91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE80D8F71B3E5FCC001A0E91 /* bytorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bytorTests.m; sourceTree = "<group>"; };
+		BE80D9021B3E608B001A0E91 /* BYTokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYTokenizer.h; path = Tokenizer/BYTokenizer.h; sourceTree = "<group>"; };
+		BE80D9031B3E608B001A0E91 /* BYTokenizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYTokenizer.m; path = Tokenizer/BYTokenizer.m; sourceTree = "<group>"; };
+		BE80D9071B3E6259001A0E91 /* BYTokenRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BYTokenRecognizer.h; path = Tokenizer/Recognizers/BYTokenRecognizer.h; sourceTree = "<group>"; };
+		BE80D9091B3E655A001A0E91 /* BYToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYToken.h; path = Tokenizer/Tokens/BYToken.h; sourceTree = "<group>"; };
+		BE80D90A1B3E655A001A0E91 /* BYToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYToken.m; path = Tokenizer/Tokens/BYToken.m; sourceTree = "<group>"; };
+		BE80D90F1B3E65D4001A0E91 /* BYKeywordToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYKeywordToken.h; path = Tokenizer/Tokens/BYKeywordToken.h; sourceTree = "<group>"; };
+		BE80D9101B3E65D4001A0E91 /* BYKeywordToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYKeywordToken.m; path = Tokenizer/Tokens/BYKeywordToken.m; sourceTree = "<group>"; };
+		BE80D9121B3E6716001A0E91 /* BYKeywordRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYKeywordRecognizer.h; path = Tokenizer/Recognizers/BYKeywordRecognizer.h; sourceTree = "<group>"; };
+		BE80D9131B3E6716001A0E91 /* BYKeywordRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYKeywordRecognizer.m; path = Tokenizer/Recognizers/BYKeywordRecognizer.m; sourceTree = "<group>"; };
+		BE80D9151B3E7B63001A0E91 /* BYWordRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYWordRecognizer.h; path = Tokenizer/Recognizers/BYWordRecognizer.h; sourceTree = "<group>"; };
+		BE80D9161B3E7B63001A0E91 /* BYWordRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYWordRecognizer.m; path = Tokenizer/Recognizers/BYWordRecognizer.m; sourceTree = "<group>"; };
+		BE80D9181B3E7B8A001A0E91 /* BYWordToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYWordToken.h; path = Tokenizer/Tokens/BYWordToken.h; sourceTree = "<group>"; };
+		BE80D9191B3E7B8A001A0E91 /* BYWordToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYWordToken.m; path = Tokenizer/Tokens/BYWordToken.m; sourceTree = "<group>"; };
+		BE80D91B1B3E840F001A0E91 /* BYNumberRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYNumberRecognizer.h; path = Tokenizer/Recognizers/BYNumberRecognizer.h; sourceTree = "<group>"; };
+		BE80D91C1B3E840F001A0E91 /* BYNumberRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYNumberRecognizer.m; path = Tokenizer/Recognizers/BYNumberRecognizer.m; sourceTree = "<group>"; };
+		BE80D91E1B3E844E001A0E91 /* BYNumberToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYNumberToken.h; path = Tokenizer/Tokens/BYNumberToken.h; sourceTree = "<group>"; };
+		BE80D91F1B3E844E001A0E91 /* BYNumberToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYNumberToken.m; path = Tokenizer/Tokens/BYNumberToken.m; sourceTree = "<group>"; };
+		BE80D9211B3E9152001A0E91 /* BYWhiteSpaceToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYWhiteSpaceToken.h; path = Tokenizer/Tokens/BYWhiteSpaceToken.h; sourceTree = "<group>"; };
+		BE80D9221B3E9152001A0E91 /* BYWhiteSpaceToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYWhiteSpaceToken.m; path = Tokenizer/Tokens/BYWhiteSpaceToken.m; sourceTree = "<group>"; };
+		BE80D9241B3E9179001A0E91 /* BYWhiteSpaceRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYWhiteSpaceRecognizer.h; path = Tokenizer/Recognizers/BYWhiteSpaceRecognizer.h; sourceTree = "<group>"; };
+		BE80D9251B3E9179001A0E91 /* BYWhiteSpaceRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYWhiteSpaceRecognizer.m; path = Tokenizer/Recognizers/BYWhiteSpaceRecognizer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE80D8D21B3E5FCC001A0E91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE80D8EE1B3E5FCC001A0E91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE80D8CC1B3E5FCC001A0E91 = {
+			isa = PBXGroup;
+			children = (
+				BE80D8D71B3E5FCC001A0E91 /* bytor */,
+				BE80D8F41B3E5FCC001A0E91 /* bytorTests */,
+				BE80D8D61B3E5FCC001A0E91 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BE80D8D61B3E5FCC001A0E91 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE80D8D51B3E5FCC001A0E91 /* bytor.app */,
+				BE80D8F11B3E5FCC001A0E91 /* bytorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE80D8D71B3E5FCC001A0E91 /* bytor */ = {
+			isa = PBXGroup;
+			children = (
+				BE80D9011B3E5FF4001A0E91 /* Tokenizer */,
+				BE80D9081B3E63DB001A0E91 /* Tokens */,
+				BE80D8DC1B3E5FCC001A0E91 /* AppDelegate.h */,
+				BE80D8DD1B3E5FCC001A0E91 /* AppDelegate.m */,
+				BE80D8E21B3E5FCC001A0E91 /* ViewController.h */,
+				BE80D8E31B3E5FCC001A0E91 /* ViewController.m */,
+				BE80D8E51B3E5FCC001A0E91 /* Main.storyboard */,
+				BE80D8E81B3E5FCC001A0E91 /* Images.xcassets */,
+				BE80D8EA1B3E5FCC001A0E91 /* LaunchScreen.xib */,
+				BE80D8DF1B3E5FCC001A0E91 /* bytor.xcdatamodeld */,
+				BE80D8D81B3E5FCC001A0E91 /* Supporting Files */,
+			);
+			path = bytor;
+			sourceTree = "<group>";
+		};
+		BE80D8D81B3E5FCC001A0E91 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE80D8D91B3E5FCC001A0E91 /* Info.plist */,
+				BE80D8DA1B3E5FCC001A0E91 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE80D8F41B3E5FCC001A0E91 /* bytorTests */ = {
+			isa = PBXGroup;
+			children = (
+				BE80D8F71B3E5FCC001A0E91 /* bytorTests.m */,
+				BE80D8F51B3E5FCC001A0E91 /* Supporting Files */,
+			);
+			path = bytorTests;
+			sourceTree = "<group>";
+		};
+		BE80D8F51B3E5FCC001A0E91 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE80D8F61B3E5FCC001A0E91 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE80D9011B3E5FF4001A0E91 /* Tokenizer */ = {
+			isa = PBXGroup;
+			children = (
+				BE80D9021B3E608B001A0E91 /* BYTokenizer.h */,
+				BE80D9031B3E608B001A0E91 /* BYTokenizer.m */,
+				BE80D9051B3E61F0001A0E91 /* TokenRecognizers */,
+			);
+			name = Tokenizer;
+			sourceTree = "<group>";
+		};
+		BE80D9051B3E61F0001A0E91 /* TokenRecognizers */ = {
+			isa = PBXGroup;
+			children = (
+				BE80D9071B3E6259001A0E91 /* BYTokenRecognizer.h */,
+				BE80D9121B3E6716001A0E91 /* BYKeywordRecognizer.h */,
+				BE80D9131B3E6716001A0E91 /* BYKeywordRecognizer.m */,
+				BE80D9151B3E7B63001A0E91 /* BYWordRecognizer.h */,
+				BE80D9161B3E7B63001A0E91 /* BYWordRecognizer.m */,
+				BE80D91B1B3E840F001A0E91 /* BYNumberRecognizer.h */,
+				BE80D91C1B3E840F001A0E91 /* BYNumberRecognizer.m */,
+				BE80D9241B3E9179001A0E91 /* BYWhiteSpaceRecognizer.h */,
+				BE80D9251B3E9179001A0E91 /* BYWhiteSpaceRecognizer.m */,
+			);
+			name = TokenRecognizers;
+			sourceTree = "<group>";
+		};
+		BE80D9081B3E63DB001A0E91 /* Tokens */ = {
+			isa = PBXGroup;
+			children = (
+				BE80D9091B3E655A001A0E91 /* BYToken.h */,
+				BE80D90A1B3E655A001A0E91 /* BYToken.m */,
+				BE80D90F1B3E65D4001A0E91 /* BYKeywordToken.h */,
+				BE80D9101B3E65D4001A0E91 /* BYKeywordToken.m */,
+				BE80D9181B3E7B8A001A0E91 /* BYWordToken.h */,
+				BE80D9191B3E7B8A001A0E91 /* BYWordToken.m */,
+				BE80D91E1B3E844E001A0E91 /* BYNumberToken.h */,
+				BE80D91F1B3E844E001A0E91 /* BYNumberToken.m */,
+				BE80D9211B3E9152001A0E91 /* BYWhiteSpaceToken.h */,
+				BE80D9221B3E9152001A0E91 /* BYWhiteSpaceToken.m */,
+			);
+			name = Tokens;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE80D8D41B3E5FCC001A0E91 /* bytor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE80D8FB1B3E5FCC001A0E91 /* Build configuration list for PBXNativeTarget "bytor" */;
+			buildPhases = (
+				BE80D8D11B3E5FCC001A0E91 /* Sources */,
+				BE80D8D21B3E5FCC001A0E91 /* Frameworks */,
+				BE80D8D31B3E5FCC001A0E91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = bytor;
+			productName = bytor;
+			productReference = BE80D8D51B3E5FCC001A0E91 /* bytor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BE80D8F01B3E5FCC001A0E91 /* bytorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE80D8FE1B3E5FCC001A0E91 /* Build configuration list for PBXNativeTarget "bytorTests" */;
+			buildPhases = (
+				BE80D8ED1B3E5FCC001A0E91 /* Sources */,
+				BE80D8EE1B3E5FCC001A0E91 /* Frameworks */,
+				BE80D8EF1B3E5FCC001A0E91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE80D8F31B3E5FCC001A0E91 /* PBXTargetDependency */,
+			);
+			name = bytorTests;
+			productName = bytorTests;
+			productReference = BE80D8F11B3E5FCC001A0E91 /* bytorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE80D8CD1B3E5FCC001A0E91 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BY;
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Eric Lee";
+				TargetAttributes = {
+					BE80D8D41B3E5FCC001A0E91 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					BE80D8F01B3E5FCC001A0E91 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = BE80D8D41B3E5FCC001A0E91;
+					};
+				};
+			};
+			buildConfigurationList = BE80D8D01B3E5FCC001A0E91 /* Build configuration list for PBXProject "bytor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BE80D8CC1B3E5FCC001A0E91;
+			productRefGroup = BE80D8D61B3E5FCC001A0E91 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BE80D8D41B3E5FCC001A0E91 /* bytor */,
+				BE80D8F01B3E5FCC001A0E91 /* bytorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE80D8D31B3E5FCC001A0E91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE80D8E71B3E5FCC001A0E91 /* Main.storyboard in Resources */,
+				BE80D8EC1B3E5FCC001A0E91 /* LaunchScreen.xib in Resources */,
+				BE80D8E91B3E5FCC001A0E91 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE80D8EF1B3E5FCC001A0E91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE80D8D11B3E5FCC001A0E91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE80D91A1B3E7B8A001A0E91 /* BYWordToken.m in Sources */,
+				BE80D9141B3E6716001A0E91 /* BYKeywordRecognizer.m in Sources */,
+				BE80D8E11B3E5FCC001A0E91 /* bytor.xcdatamodeld in Sources */,
+				BE80D8DE1B3E5FCC001A0E91 /* AppDelegate.m in Sources */,
+				BE80D8E41B3E5FCC001A0E91 /* ViewController.m in Sources */,
+				BE80D9261B3E9179001A0E91 /* BYWhiteSpaceRecognizer.m in Sources */,
+				BE80D9171B3E7B63001A0E91 /* BYWordRecognizer.m in Sources */,
+				BE80D8DB1B3E5FCC001A0E91 /* main.m in Sources */,
+				BE80D9201B3E844E001A0E91 /* BYNumberToken.m in Sources */,
+				BE80D90B1B3E655A001A0E91 /* BYToken.m in Sources */,
+				BE80D9041B3E608B001A0E91 /* BYTokenizer.m in Sources */,
+				BE80D91D1B3E840F001A0E91 /* BYNumberRecognizer.m in Sources */,
+				BE80D9111B3E65D4001A0E91 /* BYKeywordToken.m in Sources */,
+				BE80D9231B3E9152001A0E91 /* BYWhiteSpaceToken.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE80D8ED1B3E5FCC001A0E91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE80D8F81B3E5FCC001A0E91 /* bytorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BE80D8F31B3E5FCC001A0E91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE80D8D41B3E5FCC001A0E91 /* bytor */;
+			targetProxy = BE80D8F21B3E5FCC001A0E91 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BE80D8E51B3E5FCC001A0E91 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE80D8E61B3E5FCC001A0E91 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BE80D8EA1B3E5FCC001A0E91 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE80D8EB1B3E5FCC001A0E91 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BE80D8F91B3E5FCC001A0E91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BE80D8FA1B3E5FCC001A0E91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BE80D8FC1B3E5FCC001A0E91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = bytor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BE80D8FD1B3E5FCC001A0E91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = bytor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BE80D8FF1B3E5FCC001A0E91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = bytorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bytor.app/bytor";
+			};
+			name = Debug;
+		};
+		BE80D9001B3E5FCC001A0E91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = bytorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bytor.app/bytor";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE80D8D01B3E5FCC001A0E91 /* Build configuration list for PBXProject "bytor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE80D8F91B3E5FCC001A0E91 /* Debug */,
+				BE80D8FA1B3E5FCC001A0E91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE80D8FB1B3E5FCC001A0E91 /* Build configuration list for PBXNativeTarget "bytor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE80D8FC1B3E5FCC001A0E91 /* Debug */,
+				BE80D8FD1B3E5FCC001A0E91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BE80D8FE1B3E5FCC001A0E91 /* Build configuration list for PBXNativeTarget "bytorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE80D8FF1B3E5FCC001A0E91 /* Debug */,
+				BE80D9001B3E5FCC001A0E91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BE80D8DF1B3E5FCC001A0E91 /* bytor.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BE80D8E01B3E5FCC001A0E91 /* bytor.xcdatamodel */,
+			);
+			currentVersion = BE80D8E01B3E5FCC001A0E91 /* bytor.xcdatamodel */;
+			path = bytor.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BE80D8CD1B3E5FCC001A0E91 /* Project object */;
+}
