@@ -25,6 +25,8 @@
 		BE80D9201B3E844E001A0E91 /* BYNumberToken.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D91F1B3E844E001A0E91 /* BYNumberToken.m */; };
 		BE80D9231B3E9152001A0E91 /* BYWhiteSpaceToken.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D9221B3E9152001A0E91 /* BYWhiteSpaceToken.m */; };
 		BE80D9261B3E9179001A0E91 /* BYWhiteSpaceRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D9251B3E9179001A0E91 /* BYWhiteSpaceRecognizer.m */; };
+		BE80D9291B3FB82C001A0E91 /* BYCommentToken.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D9281B3FB82C001A0E91 /* BYCommentToken.m */; };
+		BE80D92C1B3FB84F001A0E91 /* BYCommentRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D92B1B3FB84F001A0E91 /* BYCommentRecognizer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,10 @@
 		BE80D9221B3E9152001A0E91 /* BYWhiteSpaceToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYWhiteSpaceToken.m; path = Tokenizer/Tokens/BYWhiteSpaceToken.m; sourceTree = "<group>"; };
 		BE80D9241B3E9179001A0E91 /* BYWhiteSpaceRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYWhiteSpaceRecognizer.h; path = Tokenizer/Recognizers/BYWhiteSpaceRecognizer.h; sourceTree = "<group>"; };
 		BE80D9251B3E9179001A0E91 /* BYWhiteSpaceRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYWhiteSpaceRecognizer.m; path = Tokenizer/Recognizers/BYWhiteSpaceRecognizer.m; sourceTree = "<group>"; };
+		BE80D9271B3FB82C001A0E91 /* BYCommentToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYCommentToken.h; path = Tokenizer/Tokens/BYCommentToken.h; sourceTree = "<group>"; };
+		BE80D9281B3FB82C001A0E91 /* BYCommentToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYCommentToken.m; path = Tokenizer/Tokens/BYCommentToken.m; sourceTree = "<group>"; };
+		BE80D92A1B3FB84F001A0E91 /* BYCommentRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYCommentRecognizer.h; path = Tokenizer/Recognizers/BYCommentRecognizer.h; sourceTree = "<group>"; };
+		BE80D92B1B3FB84F001A0E91 /* BYCommentRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYCommentRecognizer.m; path = Tokenizer/Recognizers/BYCommentRecognizer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +183,8 @@
 				BE80D91C1B3E840F001A0E91 /* BYNumberRecognizer.m */,
 				BE80D9241B3E9179001A0E91 /* BYWhiteSpaceRecognizer.h */,
 				BE80D9251B3E9179001A0E91 /* BYWhiteSpaceRecognizer.m */,
+				BE80D92A1B3FB84F001A0E91 /* BYCommentRecognizer.h */,
+				BE80D92B1B3FB84F001A0E91 /* BYCommentRecognizer.m */,
 			);
 			name = TokenRecognizers;
 			sourceTree = "<group>";
@@ -194,6 +202,8 @@
 				BE80D91F1B3E844E001A0E91 /* BYNumberToken.m */,
 				BE80D9211B3E9152001A0E91 /* BYWhiteSpaceToken.h */,
 				BE80D9221B3E9152001A0E91 /* BYWhiteSpaceToken.m */,
+				BE80D9271B3FB82C001A0E91 /* BYCommentToken.h */,
+				BE80D9281B3FB82C001A0E91 /* BYCommentToken.m */,
 			);
 			name = Tokens;
 			sourceTree = "<group>";
@@ -304,6 +314,8 @@
 				BE80D8E11B3E5FCC001A0E91 /* bytor.xcdatamodeld in Sources */,
 				BE80D8DE1B3E5FCC001A0E91 /* AppDelegate.m in Sources */,
 				BE80D8E41B3E5FCC001A0E91 /* ViewController.m in Sources */,
+				BE80D9291B3FB82C001A0E91 /* BYCommentToken.m in Sources */,
+				BE80D92C1B3FB84F001A0E91 /* BYCommentRecognizer.m in Sources */,
 				BE80D9261B3E9179001A0E91 /* BYWhiteSpaceRecognizer.m in Sources */,
 				BE80D9171B3E7B63001A0E91 /* BYWordRecognizer.m in Sources */,
 				BE80D8DB1B3E5FCC001A0E91 /* main.m in Sources */,

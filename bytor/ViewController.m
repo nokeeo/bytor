@@ -12,6 +12,7 @@
 #import "BYWordRecognizer.h"
 #import "BYNumberRecognizer.h"
 #import "BYWhiteSpaceRecognizer.h"
+#import "BYCommentRecognizer.h"
 
 @interface ViewController ()
 
@@ -30,11 +31,14 @@
     [tokenizer addTokenRecognizer: [[BYKeywordRecognizer alloc] initWith: @"{"]];
     [tokenizer addTokenRecognizer: [[BYKeywordRecognizer alloc] initWith: @"}"]];
     [tokenizer addTokenRecognizer: [[BYKeywordRecognizer alloc] initWith: @":"]];
+    [tokenizer addTokenRecognizer: [[BYKeywordRecognizer alloc] initWith: @"|"]];
+    [tokenizer addTokenRecognizer: [[BYKeywordRecognizer alloc] initWith: @","]];
     [tokenizer addTokenRecognizer: [[BYWordRecognizer alloc] init]];
+    [tokenizer addTokenRecognizer: [[BYCommentRecognizer alloc] init]];
     
     [tokenizer addIgnoredTokenRecognizers: [[BYWhiteSpaceRecognizer alloc] init]];
     
-    [tokenizer tokenize: @"variable = 10.5; style{key:value}"];
+    [tokenizer tokenize: @"variable = 10.5; /*style|parent1,parent2{key:value}*/"];
 }
 
 - (void)didReceiveMemoryWarning {
