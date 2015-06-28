@@ -121,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				BE80D9011B3E5FF4001A0E91 /* Tokenizer */,
-				BE80D9081B3E63DB001A0E91 /* Tokens */,
 				BE80D8DC1B3E5FCC001A0E91 /* AppDelegate.h */,
 				BE80D8DD1B3E5FCC001A0E91 /* AppDelegate.m */,
 				BE80D8E21B3E5FCC001A0E91 /* ViewController.h */,
@@ -167,6 +166,7 @@
 				BE80D9021B3E608B001A0E91 /* BYTokenizer.h */,
 				BE80D9031B3E608B001A0E91 /* BYTokenizer.m */,
 				BE80D9051B3E61F0001A0E91 /* TokenRecognizers */,
+				BE80D9081B3E63DB001A0E91 /* Tokens */,
 			);
 			name = Tokenizer;
 			sourceTree = "<group>";
@@ -521,6 +521,7 @@
 				BE80D8FD1B3E5FCC001A0E91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE80D8FE1B3E5FCC001A0E91 /* Build configuration list for PBXNativeTarget "bytorTests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +530,7 @@
 				BE80D9001B3E5FCC001A0E91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
