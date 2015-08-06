@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE1B9A771B4B848B0067F266 /* BYStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1B9A761B4B848B0067F266 /* BYStateMachine.m */; };
+		BE4D67841B7302FF00B438A3 /* BYTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D67831B7302FF00B438A3 /* BYTransition.m */; };
+		BE4D67881B730D7B00B438A3 /* BYBytorParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D67871B730D7B00B438A3 /* BYBytorParser.m */; };
+		BE4D678C1B73165100B438A3 /* BYTokenStream.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D678B1B73165100B438A3 /* BYTokenStream.m */; };
 		BE80D8DB1B3E5FCC001A0E91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D8DA1B3E5FCC001A0E91 /* main.m */; };
 		BE80D8DE1B3E5FCC001A0E91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D8DD1B3E5FCC001A0E91 /* AppDelegate.m */; };
 		BE80D8E11B3E5FCC001A0E91 /* bytor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE80D8DF1B3E5FCC001A0E91 /* bytor.xcdatamodeld */; };
@@ -40,6 +44,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE1B9A751B4B848B0067F266 /* BYStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYStateMachine.h; path = StateMachine/BYStateMachine.h; sourceTree = "<group>"; };
+		BE1B9A761B4B848B0067F266 /* BYStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYStateMachine.m; path = StateMachine/BYStateMachine.m; sourceTree = "<group>"; };
+		BE4D67821B7302FF00B438A3 /* BYTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYTransition.h; path = StateMachine/BYTransition.h; sourceTree = "<group>"; };
+		BE4D67831B7302FF00B438A3 /* BYTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYTransition.m; path = StateMachine/BYTransition.m; sourceTree = "<group>"; };
+		BE4D67861B730D7B00B438A3 /* BYBytorParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYBytorParser.h; path = Parser/BYBytorParser.h; sourceTree = "<group>"; };
+		BE4D67871B730D7B00B438A3 /* BYBytorParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYBytorParser.m; path = Parser/BYBytorParser.m; sourceTree = "<group>"; };
+		BE4D678A1B73165100B438A3 /* BYTokenStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYTokenStream.h; path = Tokenizer/BYTokenStream.h; sourceTree = "<group>"; };
+		BE4D678B1B73165100B438A3 /* BYTokenStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYTokenStream.m; path = Tokenizer/BYTokenStream.m; sourceTree = "<group>"; };
 		BE80D8D51B3E5FCC001A0E91 /* bytor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bytor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE80D8D91B3E5FCC001A0E91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE80D8DA1B3E5FCC001A0E91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -99,6 +111,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE1B9A741B4B845C0067F266 /* State Machine */ = {
+			isa = PBXGroup;
+			children = (
+				BE1B9A751B4B848B0067F266 /* BYStateMachine.h */,
+				BE1B9A761B4B848B0067F266 /* BYStateMachine.m */,
+				BE4D67821B7302FF00B438A3 /* BYTransition.h */,
+				BE4D67831B7302FF00B438A3 /* BYTransition.m */,
+			);
+			name = "State Machine";
+			sourceTree = "<group>";
+		};
+		BE4D67851B730D5E00B438A3 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				BE4D67861B730D7B00B438A3 /* BYBytorParser.h */,
+				BE4D67871B730D7B00B438A3 /* BYBytorParser.m */,
+			);
+			name = Parser;
+			sourceTree = "<group>";
+		};
 		BE80D8CC1B3E5FCC001A0E91 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +152,8 @@
 		BE80D8D71B3E5FCC001A0E91 /* bytor */ = {
 			isa = PBXGroup;
 			children = (
+				BE4D67851B730D5E00B438A3 /* Parser */,
+				BE1B9A741B4B845C0067F266 /* State Machine */,
 				BE80D9011B3E5FF4001A0E91 /* Tokenizer */,
 				BE80D8DC1B3E5FCC001A0E91 /* AppDelegate.h */,
 				BE80D8DD1B3E5FCC001A0E91 /* AppDelegate.m */,
@@ -165,6 +199,8 @@
 			children = (
 				BE80D9021B3E608B001A0E91 /* BYTokenizer.h */,
 				BE80D9031B3E608B001A0E91 /* BYTokenizer.m */,
+				BE4D678A1B73165100B438A3 /* BYTokenStream.h */,
+				BE4D678B1B73165100B438A3 /* BYTokenStream.m */,
 				BE80D9051B3E61F0001A0E91 /* TokenRecognizers */,
 				BE80D9081B3E63DB001A0E91 /* Tokens */,
 			);
@@ -315,14 +351,18 @@
 				BE80D8DE1B3E5FCC001A0E91 /* AppDelegate.m in Sources */,
 				BE80D8E41B3E5FCC001A0E91 /* ViewController.m in Sources */,
 				BE80D9291B3FB82C001A0E91 /* BYCommentToken.m in Sources */,
+				BE4D678C1B73165100B438A3 /* BYTokenStream.m in Sources */,
 				BE80D92C1B3FB84F001A0E91 /* BYCommentRecognizer.m in Sources */,
+				BE4D67841B7302FF00B438A3 /* BYTransition.m in Sources */,
 				BE80D9261B3E9179001A0E91 /* BYWhiteSpaceRecognizer.m in Sources */,
 				BE80D9171B3E7B63001A0E91 /* BYWordRecognizer.m in Sources */,
 				BE80D8DB1B3E5FCC001A0E91 /* main.m in Sources */,
 				BE80D9201B3E844E001A0E91 /* BYNumberToken.m in Sources */,
 				BE80D90B1B3E655A001A0E91 /* BYToken.m in Sources */,
+				BE4D67881B730D7B00B438A3 /* BYBytorParser.m in Sources */,
 				BE80D9041B3E608B001A0E91 /* BYTokenizer.m in Sources */,
 				BE80D91D1B3E840F001A0E91 /* BYNumberRecognizer.m in Sources */,
+				BE1B9A771B4B848B0067F266 /* BYStateMachine.m in Sources */,
 				BE80D9111B3E65D4001A0E91 /* BYKeywordToken.m in Sources */,
 				BE80D9231B3E9152001A0E91 /* BYWhiteSpaceToken.m in Sources */,
 			);

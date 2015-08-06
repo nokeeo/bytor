@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "BYTokenRecognizer.h"
+#import "BYTokenStream.h"
 
 @interface BYTokenizer : NSObject
 
--(NSArray *) tokenize: (NSString *) inputString;
+-(BYTokenStream *) tokenize: (NSString *) inputString;
 -(void) addTokenRecognizer: (id<BYTokenRecognizer>) recognizer;
 -(void) addIgnoredTokenRecognizers: (id<BYTokenRecognizer>) recognizer;
 

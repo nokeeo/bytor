@@ -30,8 +30,8 @@
 
 #pragma mark - Public methods
 
--(NSArray *) tokenize:(NSString *)inputString {
-    NSMutableArray *tokens = [NSMutableArray array];
+-(BYTokenStream *) tokenize:(NSString *)inputString {
+    BYTokenStream *tokens = [[BYTokenStream alloc] init];
     
     NSInteger currentCharPosition = 0;
     
@@ -44,7 +44,7 @@
             
             if(token) {
                 tokenFound = YES;
-                [tokens addObject: token];
+                [tokens addToken: token];
                 currentCharPosition += token.length;
                 
                 NSLog(@"%@", tokens);

@@ -14,6 +14,9 @@
 #import "BYWhiteSpaceRecognizer.h"
 #import "BYCommentRecognizer.h"
 
+#import "BYTokenStream.h"
+#import "BYBytorParser.h"
+
 @interface ViewController ()
 
 @end
@@ -38,7 +41,11 @@
     
     [tokenizer addIgnoredTokenRecognizers: [[BYWhiteSpaceRecognizer alloc] init]];
     
-    [tokenizer tokenize: @"variable = 10.5; /*style|parent1,parent2{key:value}*/"];
+    BYTokenStream *tokenStream = [tokenizer tokenize: @"variable = 10.5; /*style|parent1,parent2{key:value}*/"];
+    
+    BYBytorParser *parser = [[BYBytorParser alloc] init];
+    [parser parse: tokenStream];
+    
 }
 
 - (void)didReceiveMemoryWarning {
