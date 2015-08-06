@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BYParser.h"
 
 @interface BYBytorParser : NSObject
 
