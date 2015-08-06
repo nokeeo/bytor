@@ -12,6 +12,7 @@
 @interface BYStateMachine()
 
 @property (nonatomic, strong) NSMutableDictionary *lookupTable;
+@property (nonatomic, strong) NSMutableDictionary *transitionOperationLookUpTable;
 @property NSInteger currentState;
 
 @end
@@ -22,6 +23,7 @@
     self = [super init];
     if(self) {
         _lookupTable = [[NSMutableDictionary alloc] init];
+        _transitionOperationLookUpTable = [[NSMutableDictionary alloc] init];
     }
     
     return self;
@@ -36,11 +38,13 @@
     
     if(keywordFinalState) {
         self.currentState = [keywordFinalState integerValue];
+        [self runOperationWith: keywordTransition];
         NSLog(@"Moved states using %@", token);
         NSLog(@"Current State: %ld", (long)[keywordFinalState integerValue]);
     }
     else if(classFinalState) {
         self.currentState = [classFinalState integerValue];
+        [self runOperationWith: classTransition];
         NSLog(@"Moved states using %@", token);
         NSLog(@"Current State: %ld", (long)[classFinalState integerValue]);
     }
@@ -49,16 +53,31 @@
     }
 }
 
--(void) addTransitionWith:(NSInteger) startState keyword:(NSString *) keyword finalState:(NSInteger) finalState {
+-(void) addTransitionWith:(NSInteger) startState keyword:(NSString *) keyword finalState:(NSInteger) finalState operation:(BYTransitionOperation) operation {
     BYTransition *newTransition = [[BYTransition alloc] initWith: startState value: keyword];
     [self.lookupTable setObject: [NSNumber numberWithLong: finalState] forKey: newTransition];
-    NSLog(@"%@", self.lookupTable);
+    [self addOperationToTable: operation withTransition: newTransition];
 }
 
--(void) addTransitionWith:(NSInteger) startState class: (Class) class finalState:(NSInteger) finalState {
+-(void) addTransitionWith:(NSInteger) startState class: (Class) class finalState:(NSInteger) finalState operation:(BYTransitionOperation) operation{
     BYTransition *newTransition = [[BYTransition alloc] initWith: startState value: [class description]];
     [self.lookupTable setObject: [NSNumber numberWithLong: finalState] forKey: newTransition];
-    NSLog(@"%@", self.lookupTable);
+    [self addOperationToTable: operation withTransition: newTransition];
+}
+
+#pragma mark - Helper Methods
+
+-(void) addOperationToTable: (BYTransitionOperation) operation withTransition:(BYTransition *) transition {
+    if(operation) {
+        [self.transitionOperationLookUpTable setObject: operation forKey: transition];
+    }
+}
+
+-(void) runOperationWith: (BYTransition *) transition {
+    BYTransitionOperation operation = [self.transitionOperationLookUpTable objectForKey: transition];
+    if(operation) {
+        operation();
+    }
 }
 
 @end

@@ -32,14 +32,18 @@ typedef NS_ENUM(NSInteger, BytorState){
     if(self) {
         self.stateMachine = [[BYStateMachine alloc] init];
         
-        [self.stateMachine addTransitionWith: InitialState class: [BYWordToken class] finalState: DeterminingVariableOrStyle];
+        [self.stateMachine addTransitionWith: InitialState class: [BYWordToken class] finalState: DeterminingVariableOrStyle operation: nil];
         
         //Variable Parsing
-        [self.stateMachine addTransitionWith: DeterminingVariableOrStyle keyword: @"=" finalState: VariableDetermined];
-        [self.stateMachine addTransitionWith: VariableDetermined class: [BYNumberToken class] finalState: ValueOfVariableDetermined];
-        [self.stateMachine addTransitionWith: ValueOfVariableDetermined keyword: @";" finalState: DeterminingVariableOrStyle];
+        [self.stateMachine addTransitionWith: DeterminingVariableOrStyle keyword: @"=" finalState: VariableDetermined operation:^{
+            NSLog(@"Parsing the variable started");
+        }];
+        [self.stateMachine addTransitionWith: VariableDetermined class: [BYNumberToken class] finalState: ValueOfVariableDetermined operation: nil];
+        [self.stateMachine addTransitionWith: ValueOfVariableDetermined keyword: @";" finalState: DeterminingVariableOrStyle operation:^{
+            NSLog(@"Parsing the variable completed");
+        }];
         
-        [self.stateMachine addTransitionWith: DeterminingVariableOrStyle keyword: @"{" finalState: StyleDetermined];
+        [self.stateMachine addTransitionWith: DeterminingVariableOrStyle keyword: @"{" finalState: StyleDetermined operation: nil];
     }
     
     return self;

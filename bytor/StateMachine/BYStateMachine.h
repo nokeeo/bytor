@@ -9,10 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "BYToken.h"
 
+typedef void (^BYTransitionOperation)();
+
 @interface BYStateMachine : NSObject
 
--(void) addTransitionWith:(NSInteger) startState keyword:(NSString *) keyword finalState:(NSInteger) finalState;
--(void) addTransitionWith:(NSInteger) startState class: (Class) class finalState:(NSInteger) finalState;
+-(void) addTransitionWith:(NSInteger) startState keyword:(NSString *) keyword finalState:(NSInteger) finalState operation: (BYTransitionOperation) TransitionOperation;
+-(void) addTransitionWith:(NSInteger) startState class: (Class) class finalState:(NSInteger) finalState operation: (BYTransitionOperation) TransitionOperation;
 
 -(void) consumeToken: (BYToken *) token;
 
