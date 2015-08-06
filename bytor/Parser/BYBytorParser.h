@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BYTokenStream.h"
 
 @interface BYBytorParser : NSObject
 
