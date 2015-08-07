@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "BYToken.h"
 
-typedef void (^BYTransitionOperation)();
+typedef void (^BYTransitionOperation)(NSMutableDictionary*, BYToken*);
 
 @interface BYStateMachine : NSObject
 

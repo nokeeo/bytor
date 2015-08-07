@@ -41,7 +41,7 @@
     
     [tokenizer addIgnoredTokenRecognizers: [[BYWhiteSpaceRecognizer alloc] init]];
     
-    BYTokenStream *tokenStream = [tokenizer tokenize: @"variable = 10.5; /*style|parent1,parent2{key:value}*/"];
+    BYTokenStream *tokenStream = [tokenizer tokenize: @"variable = 10.5; style{key:5.5;}"];
     
     BYBytorParser *parser = [[BYBytorParser alloc] init];
     [parser parse: tokenStream];

@@ -13,6 +13,7 @@
 
 @property (nonatomic, strong) NSMutableDictionary *lookupTable;
 @property (nonatomic, strong) NSMutableDictionary *transitionOperationLookUpTable;
+@property (nonatomic, strong) NSMutableDictionary *transitionContext;
 @property NSInteger currentState;
 
 @end
@@ -24,6 +25,7 @@
     if(self) {
         _lookupTable = [[NSMutableDictionary alloc] init];
         _transitionOperationLookUpTable = [[NSMutableDictionary alloc] init];
+        _transitionContext = [[NSMutableDictionary alloc] init];
     }
     
     return self;
@@ -38,13 +40,13 @@
     
     if(keywordFinalState) {
         self.currentState = [keywordFinalState integerValue];
-        [self runOperationWith: keywordTransition];
+        [self runOperationWith: keywordTransition token: token];
         NSLog(@"Moved states using %@", token);
         NSLog(@"Current State: %ld", (long)[keywordFinalState integerValue]);
     }
     else if(classFinalState) {
         self.currentState = [classFinalState integerValue];
-        [self runOperationWith: classTransition];
+        [self runOperationWith: classTransition token: token];
         NSLog(@"Moved states using %@", token);
         NSLog(@"Current State: %ld", (long)[classFinalState integerValue]);
     }
@@ -73,10 +75,10 @@
     }
 }
 
--(void) runOperationWith: (BYTransition *) transition {
+-(void) runOperationWith: (BYTransition *) transition token: (BYToken *) token {
     BYTransitionOperation operation = [self.transitionOperationLookUpTable objectForKey: transition];
     if(operation) {
-        operation();
+        operation(self.transitionContext, token);
     }
 }
 
