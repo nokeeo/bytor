@@ -9,7 +9,7 @@
 #import "BYToken.h"
 #import "BYTokenRecognizer.h"
 
-@interface BYKeywordRecognizer : BYToken <BYTokenRecognizer>
+@interface BYKeywordRecognizer : NSObject <BYTokenRecognizer>
 
 -(id) initWith: (NSString *) keyword;
 

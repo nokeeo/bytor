@@ -9,6 +9,6 @@
 #import "BYToken.h"
 #import "BYTokenRecognizer.h"
 
-@interface BYWhiteSpaceRecognizer : BYToken <BYTokenRecognizer>
+@interface BYWhiteSpaceRecognizer : NSObject <BYTokenRecognizer>
 
 @end

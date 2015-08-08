@@ -11,6 +11,7 @@
 #import "BYStyle.h"
 #import "BYWordToken.h"
 #import "BYNumberToken.h"
+#import "BYStringToken.h"
 
 typedef NS_ENUM(NSInteger, BytorState){
     InitialState,
@@ -51,9 +52,12 @@ typedef NS_ENUM(NSInteger, BytorState){
         //Variable Parsing
         [self.stateMachine addTransitionWith: DeterminingVariableOrStyle keyword: @"=" finalState: VariableDetermined operation: nil];
         
-        [self.stateMachine addTransitionWith: VariableDetermined class: [BYNumberToken class] finalState: ValueOfVariableDetermined operation:^(NSMutableDictionary *context, BYToken *token) {
+        BYTransitionOperation variableValueOperation = ^(NSMutableDictionary *context, BYToken *token) {
             [context setObject: token forKey:@"variable"];
-        }];
+        };
+        
+        [self.stateMachine addTransitionWith: VariableDetermined class: [BYNumberToken class] finalState: ValueOfVariableDetermined operation: variableValueOperation];
+        [self.stateMachine addTransitionWith: VariableDetermined class: [BYStringToken class] finalState: ValueOfVariableDetermined operation: variableValueOperation];
         
         [self.stateMachine addTransitionWith: ValueOfVariableDetermined keyword: @";" finalState: InitialState operation:^(NSMutableDictionary *context, BYToken *token){
             //Commit Variable to variable dictionary.
@@ -72,9 +76,12 @@ typedef NS_ENUM(NSInteger, BytorState){
         
         [self.stateMachine addTransitionWith: StylePropertyFound keyword: @":" finalState: WaitingStylePropertyValue operation:nil];
         
-        [self.stateMachine addTransitionWith: WaitingStylePropertyValue class: [BYNumberToken class] finalState: StylePropertyValueFound operation:^(NSMutableDictionary *context, BYToken *token) {
+        BYTransitionOperation stylePropertyValueOperation = ^(NSMutableDictionary *context, BYToken *token) {
             [context setObject: token forKey: @"currentStylePropertyValue"];
-        }];
+        };
+        
+        [self.stateMachine addTransitionWith: WaitingStylePropertyValue class: [BYNumberToken class] finalState: StylePropertyValueFound operation: stylePropertyValueOperation];
+        [self.stateMachine addTransitionWith: WaitingStylePropertyValue class: [BYStringToken class] finalState: StylePropertyValueFound operation: stylePropertyValueOperation];
         
         [self.stateMachine addTransitionWith: StylePropertyValueFound keyword: @";" finalState: StyleDetermined operation:^(NSMutableDictionary * context, BYToken *token) {
             BYStyle *style = [context objectForKey: @"currentStyle"];

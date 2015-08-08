@@ -13,6 +13,7 @@
 #import "BYNumberRecognizer.h"
 #import "BYWhiteSpaceRecognizer.h"
 #import "BYCommentRecognizer.h"
+#import "BYStringRecognizer.h"
 
 #import "BYTokenStream.h"
 #import "BYBytorParser.h"
@@ -37,11 +38,12 @@
     [tokenizer addTokenRecognizer: [[BYKeywordRecognizer alloc] initWith: @"|"]];
     [tokenizer addTokenRecognizer: [[BYKeywordRecognizer alloc] initWith: @","]];
     [tokenizer addTokenRecognizer: [[BYWordRecognizer alloc] init]];
+    [tokenizer addTokenRecognizer: [[BYStringRecognizer alloc] init]];
     [tokenizer addTokenRecognizer: [[BYCommentRecognizer alloc] init]];
     
     [tokenizer addIgnoredTokenRecognizers: [[BYWhiteSpaceRecognizer alloc] init]];
     
-    BYTokenStream *tokenStream = [tokenizer tokenize: @"variable = 10.5; style{key:5.5;}"];
+    BYTokenStream *tokenStream = [tokenizer tokenize: @"variable = \"10.5\"; style{key:5.5;}"];
     
     BYBytorParser *parser = [[BYBytorParser alloc] init];
     [parser parse: tokenStream];
