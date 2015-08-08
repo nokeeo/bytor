@@ -182,18 +182,34 @@
 			isa = PBXGroup;
 			children = (
 				BE4D67A61B75CD6000B438A3 /* BYStyleProperty.h */,
+				BE4D67BD1B75E10600B438A3 /* General */,
+				BE4D67BC1B75E0EE00B438A3 /* Border */,
+			);
+			name = Properties;
+			sourceTree = "<group>";
+		};
+		BE4D67BC1B75E0EE00B438A3 /* Border */ = {
+			isa = PBXGroup;
+			children = (
 				BE4D67A71B75CE2800B438A3 /* BYStyleProperty_border_radius.h */,
 				BE4D67A81B75CE2800B438A3 /* BYStyleProperty_border_radius.m */,
 				BE4D67AA1B75D57800B438A3 /* BYStyleProperty_border_width.h */,
 				BE4D67AB1B75D57800B438A3 /* BYStyleProperty_border_width.m */,
+				BE4D67B91B75E01900B438A3 /* BYStyleProperty_border_color.h */,
+				BE4D67BA1B75E01900B438A3 /* BYStyleProperty_border_color.m */,
+			);
+			name = Border;
+			sourceTree = "<group>";
+		};
+		BE4D67BD1B75E10600B438A3 /* General */ = {
+			isa = PBXGroup;
+			children = (
 				BE4D67B31B75DE7C00B438A3 /* BYStyleProperty_background_color.h */,
 				BE4D67B41B75DE7C00B438A3 /* BYStyleProperty_background_color.m */,
 				BE4D67B61B75DF2C00B438A3 /* BYStyleProperty_opacity.h */,
 				BE4D67B71B75DF2C00B438A3 /* BYStyleProperty_opacity.m */,
-				BE4D67B91B75E01900B438A3 /* BYStyleProperty_border_color.h */,
-				BE4D67BA1B75E01900B438A3 /* BYStyleProperty_border_color.m */,
 			);
-			name = Properties;
+			name = General;
 			sourceTree = "<group>";
 		};
 		BE80D8CC1B3E5FCC001A0E91 = {
