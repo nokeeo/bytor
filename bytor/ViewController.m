@@ -45,7 +45,7 @@
     
     [tokenizer addIgnoredTokenRecognizers: [[BYWhiteSpaceRecognizer alloc] init]];
     
-    BYTokenStream *tokenStream = [tokenizer tokenize: @"testView{border-radius:20;}"];
+    BYTokenStream *tokenStream = [tokenizer tokenize: @"testView{border-radius:20;border-width:10.5;}"];
     
     BYBytorParser *parser = [[BYBytorParser alloc] init];
     BYBytorRuntime *runtime = [parser parse: tokenStream];

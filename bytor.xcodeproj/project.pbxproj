@@ -16,6 +16,7 @@
 		BE4D67981B75A52000B438A3 /* BYStringRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D67971B75A52000B438A3 /* BYStringRecognizer.m */; };
 		BE4D679B1B75BB5700B438A3 /* BYBytorRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D679A1B75BB5700B438A3 /* BYBytorRuntime.m */; };
 		BE4D67A91B75CE2800B438A3 /* BYStyleProperty_border_radius.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D67A81B75CE2800B438A3 /* BYStyleProperty_border_radius.m */; };
+		BE4D67AC1B75D57800B438A3 /* BYStyleProperty_border_width.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D67AB1B75D57800B438A3 /* BYStyleProperty_border_width.m */; };
 		BE80D8DB1B3E5FCC001A0E91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D8DA1B3E5FCC001A0E91 /* main.m */; };
 		BE80D8DE1B3E5FCC001A0E91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D8DD1B3E5FCC001A0E91 /* AppDelegate.m */; };
 		BE80D8E11B3E5FCC001A0E91 /* bytor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE80D8DF1B3E5FCC001A0E91 /* bytor.xcdatamodeld */; };
@@ -68,6 +69,8 @@
 		BE4D67A61B75CD6000B438A3 /* BYStyleProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BYStyleProperty.h; path = Parser/Properties/BYStyleProperty.h; sourceTree = "<group>"; };
 		BE4D67A71B75CE2800B438A3 /* BYStyleProperty_border_radius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYStyleProperty_border_radius.h; path = Parser/Properties/BYStyleProperty_border_radius.h; sourceTree = "<group>"; };
 		BE4D67A81B75CE2800B438A3 /* BYStyleProperty_border_radius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYStyleProperty_border_radius.m; path = Parser/Properties/BYStyleProperty_border_radius.m; sourceTree = "<group>"; };
+		BE4D67AA1B75D57800B438A3 /* BYStyleProperty_border_width.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYStyleProperty_border_width.h; path = Parser/Properties/BYStyleProperty_border_width.h; sourceTree = "<group>"; };
+		BE4D67AB1B75D57800B438A3 /* BYStyleProperty_border_width.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYStyleProperty_border_width.m; path = Parser/Properties/BYStyleProperty_border_width.m; sourceTree = "<group>"; };
 		BE80D8D51B3E5FCC001A0E91 /* bytor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bytor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE80D8D91B3E5FCC001A0E91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE80D8DA1B3E5FCC001A0E91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -166,6 +169,8 @@
 				BE4D67A61B75CD6000B438A3 /* BYStyleProperty.h */,
 				BE4D67A71B75CE2800B438A3 /* BYStyleProperty_border_radius.h */,
 				BE4D67A81B75CE2800B438A3 /* BYStyleProperty_border_radius.m */,
+				BE4D67AA1B75D57800B438A3 /* BYStyleProperty_border_width.h */,
+				BE4D67AB1B75D57800B438A3 /* BYStyleProperty_border_width.m */,
 			);
 			name = Properties;
 			sourceTree = "<group>";
@@ -394,6 +399,7 @@
 				BE80D8E11B3E5FCC001A0E91 /* bytor.xcdatamodeld in Sources */,
 				BE80D8DE1B3E5FCC001A0E91 /* AppDelegate.m in Sources */,
 				BE4D67981B75A52000B438A3 /* BYStringRecognizer.m in Sources */,
+				BE4D67AC1B75D57800B438A3 /* BYStyleProperty_border_width.m in Sources */,
 				BE80D8E41B3E5FCC001A0E91 /* ViewController.m in Sources */,
 				BE80D9291B3FB82C001A0E91 /* BYCommentToken.m in Sources */,
 				BE4D678C1B73165100B438A3 /* BYTokenStream.m in Sources */,
