@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "BYTokenStream.h"
+#import "BYBytorRuntime.h"
 
 @interface BYBytorParser : NSObject
 
--(void) parse: (BYTokenStream *) tokenStream;
+-(BYBytorRuntime *) parse: (BYTokenStream *) tokenStream;
 
 @end

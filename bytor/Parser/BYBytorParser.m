@@ -27,9 +27,7 @@ typedef NS_ENUM(NSInteger, BytorState){
 @interface BYBytorParser()
 
 @property (nonatomic, strong) BYStateMachine *stateMachine;
-
-@property (nonatomic, strong) NSMutableDictionary *variables;
-@property (nonatomic, strong) NSMutableDictionary *styles;
+@property (nonatomic, strong) BYBytorRuntime *bytorRuntime;
 
 @end
 
@@ -39,8 +37,9 @@ typedef NS_ENUM(NSInteger, BytorState){
     self = [super init];
     if(self) {
         self.stateMachine = [[BYStateMachine alloc] init];
-        self.variables = [[NSMutableDictionary alloc] init];
-        self.styles = [[NSMutableDictionary alloc] init];
+        self.bytorRuntime = [[BYBytorRuntime alloc] init];
+        
+        [self.stateMachine setFinalStates: @[[NSNumber numberWithInteger: InitialState]]];
         
         __weak typeof(self) weakSelf = self;
         
@@ -62,7 +61,7 @@ typedef NS_ENUM(NSInteger, BytorState){
         [self.stateMachine addTransitionWith: ValueOfVariableDetermined keyword: @";" finalState: InitialState operation:^(NSMutableDictionary *context, BYToken *token){
             //Commit Variable to variable dictionary.
             NSString *variableName = context[@"elementName"];
-            [weakSelf.variables setObject: [context objectForKey: @"variable"] forKey: variableName];
+            [weakSelf.bytorRuntime addVariable: variableName value: [context objectForKey: @"variable"]];
         }];
         
         //Style Parsing
@@ -93,7 +92,7 @@ typedef NS_ENUM(NSInteger, BytorState){
         [self.stateMachine addTransitionWith: StyleDetermined keyword: @"}" finalState: InitialState operation:^(NSMutableDictionary *context, BYToken *token) {
             BYStyle *style = [context objectForKey: @"currentStyle"];
             NSString *styleName = [context objectForKey: @"elementName"];
-            [weakSelf.styles setObject: style forKey: styleName];
+            [weakSelf.bytorRuntime addStyle: styleName style: style];
         }];
         
     }
@@ -101,13 +100,17 @@ typedef NS_ENUM(NSInteger, BytorState){
     return self;
 }
 
--(void) parse: (BYTokenStream *) tokenStream {
+-(BYBytorRuntime *) parse: (BYTokenStream *) tokenStream {
     while(tokenStream.hasNext) {
         BYToken *currentToken = [tokenStream nextToken];
         [self.stateMachine consumeToken: currentToken];
     }
-    NSLog(@"%@", self.variables);
-    NSLog(@"%@", self.styles);
+    
+    if([self.stateMachine isInFinalState]) {
+        return self.bytorRuntime;
+    }
+    
+    return nil;
 }
 
 @end

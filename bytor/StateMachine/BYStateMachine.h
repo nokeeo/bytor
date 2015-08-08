@@ -18,4 +18,7 @@ typedef void (^BYTransitionOperation)(NSMutableDictionary*, BYToken*);
 
 -(void) consumeToken: (BYToken *) token;
 
+-(void) setFinalStates: (NSArray *) finalStates;
+-(BOOL) isInFinalState;
+
 @end

@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSMutableDictionary *lookupTable;
 @property (nonatomic, strong) NSMutableDictionary *transitionOperationLookUpTable;
 @property (nonatomic, strong) NSMutableDictionary *transitionContext;
+@property (nonatomic, strong) NSArray *finalStates;
 @property NSInteger currentState;
 
 @end
@@ -26,6 +27,7 @@
         _lookupTable = [[NSMutableDictionary alloc] init];
         _transitionOperationLookUpTable = [[NSMutableDictionary alloc] init];
         _transitionContext = [[NSMutableDictionary alloc] init];
+        _finalStates = [NSArray array];
     }
     
     return self;
@@ -65,6 +67,15 @@
     BYTransition *newTransition = [[BYTransition alloc] initWith: startState value: [class description]];
     [self.lookupTable setObject: [NSNumber numberWithLong: finalState] forKey: newTransition];
     [self addOperationToTable: operation withTransition: newTransition];
+}
+
+-(void) setFinalStates:(NSArray *)finalStates {
+    _finalStates = finalStates;
+}
+
+-(BOOL) isInFinalState {
+    NSNumber *currentState = [NSNumber numberWithInteger: self.currentState];
+    return [self.finalStates indexOfObjectIdenticalTo: currentState] != NSNotFound;
 }
 
 #pragma mark - Helper Methods
