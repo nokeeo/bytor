@@ -17,6 +17,10 @@
 		BE4D679B1B75BB5700B438A3 /* BYBytorRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D679A1B75BB5700B438A3 /* BYBytorRuntime.m */; };
 		BE4D67A91B75CE2800B438A3 /* BYStyleProperty_border_radius.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D67A81B75CE2800B438A3 /* BYStyleProperty_border_radius.m */; };
 		BE4D67AC1B75D57800B438A3 /* BYStyleProperty_border_width.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D67AB1B75D57800B438A3 /* BYStyleProperty_border_width.m */; };
+		BE4D67AF1B75DA7100B438A3 /* BYHexColorToken.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D67AE1B75DA7100B438A3 /* BYHexColorToken.m */; };
+		BE4D67B21B75DA9100B438A3 /* BYColorRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D67B11B75DA9100B438A3 /* BYColorRecognizer.m */; };
+		BE4D67B51B75DE7C00B438A3 /* BYStyleProperty_background_color.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D67B41B75DE7C00B438A3 /* BYStyleProperty_background_color.m */; };
+		BE4D67B81B75DF2C00B438A3 /* BYStyleProperty_opacity.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D67B71B75DF2C00B438A3 /* BYStyleProperty_opacity.m */; };
 		BE80D8DB1B3E5FCC001A0E91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D8DA1B3E5FCC001A0E91 /* main.m */; };
 		BE80D8DE1B3E5FCC001A0E91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D8DD1B3E5FCC001A0E91 /* AppDelegate.m */; };
 		BE80D8E11B3E5FCC001A0E91 /* bytor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE80D8DF1B3E5FCC001A0E91 /* bytor.xcdatamodeld */; };
@@ -71,6 +75,14 @@
 		BE4D67A81B75CE2800B438A3 /* BYStyleProperty_border_radius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYStyleProperty_border_radius.m; path = Parser/Properties/BYStyleProperty_border_radius.m; sourceTree = "<group>"; };
 		BE4D67AA1B75D57800B438A3 /* BYStyleProperty_border_width.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYStyleProperty_border_width.h; path = Parser/Properties/BYStyleProperty_border_width.h; sourceTree = "<group>"; };
 		BE4D67AB1B75D57800B438A3 /* BYStyleProperty_border_width.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYStyleProperty_border_width.m; path = Parser/Properties/BYStyleProperty_border_width.m; sourceTree = "<group>"; };
+		BE4D67AD1B75DA7000B438A3 /* BYHexColorToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYHexColorToken.h; path = Tokenizer/Tokens/BYHexColorToken.h; sourceTree = "<group>"; };
+		BE4D67AE1B75DA7100B438A3 /* BYHexColorToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYHexColorToken.m; path = Tokenizer/Tokens/BYHexColorToken.m; sourceTree = "<group>"; };
+		BE4D67B01B75DA9100B438A3 /* BYColorRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYColorRecognizer.h; path = Tokenizer/Recognizers/BYColorRecognizer.h; sourceTree = "<group>"; };
+		BE4D67B11B75DA9100B438A3 /* BYColorRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYColorRecognizer.m; path = Tokenizer/Recognizers/BYColorRecognizer.m; sourceTree = "<group>"; };
+		BE4D67B31B75DE7C00B438A3 /* BYStyleProperty_background_color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYStyleProperty_background_color.h; path = Parser/Properties/BYStyleProperty_background_color.h; sourceTree = "<group>"; };
+		BE4D67B41B75DE7C00B438A3 /* BYStyleProperty_background_color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYStyleProperty_background_color.m; path = Parser/Properties/BYStyleProperty_background_color.m; sourceTree = "<group>"; };
+		BE4D67B61B75DF2C00B438A3 /* BYStyleProperty_opacity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYStyleProperty_opacity.h; path = Parser/Properties/BYStyleProperty_opacity.h; sourceTree = "<group>"; };
+		BE4D67B71B75DF2C00B438A3 /* BYStyleProperty_opacity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYStyleProperty_opacity.m; path = Parser/Properties/BYStyleProperty_opacity.m; sourceTree = "<group>"; };
 		BE80D8D51B3E5FCC001A0E91 /* bytor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bytor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE80D8D91B3E5FCC001A0E91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE80D8DA1B3E5FCC001A0E91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -171,6 +183,10 @@
 				BE4D67A81B75CE2800B438A3 /* BYStyleProperty_border_radius.m */,
 				BE4D67AA1B75D57800B438A3 /* BYStyleProperty_border_width.h */,
 				BE4D67AB1B75D57800B438A3 /* BYStyleProperty_border_width.m */,
+				BE4D67B31B75DE7C00B438A3 /* BYStyleProperty_background_color.h */,
+				BE4D67B41B75DE7C00B438A3 /* BYStyleProperty_background_color.m */,
+				BE4D67B61B75DF2C00B438A3 /* BYStyleProperty_opacity.h */,
+				BE4D67B71B75DF2C00B438A3 /* BYStyleProperty_opacity.m */,
 			);
 			name = Properties;
 			sourceTree = "<group>";
@@ -267,6 +283,8 @@
 				BE80D92B1B3FB84F001A0E91 /* BYCommentRecognizer.m */,
 				BE4D67961B75A52000B438A3 /* BYStringRecognizer.h */,
 				BE4D67971B75A52000B438A3 /* BYStringRecognizer.m */,
+				BE4D67B01B75DA9100B438A3 /* BYColorRecognizer.h */,
+				BE4D67B11B75DA9100B438A3 /* BYColorRecognizer.m */,
 			);
 			name = TokenRecognizers;
 			sourceTree = "<group>";
@@ -288,6 +306,8 @@
 				BE80D9281B3FB82C001A0E91 /* BYCommentToken.m */,
 				BE4D67931B75A4A500B438A3 /* BYStringToken.h */,
 				BE4D67941B75A4A500B438A3 /* BYStringToken.m */,
+				BE4D67AD1B75DA7000B438A3 /* BYHexColorToken.h */,
+				BE4D67AE1B75DA7100B438A3 /* BYHexColorToken.m */,
 			);
 			name = Tokens;
 			sourceTree = "<group>";
@@ -397,8 +417,10 @@
 				BE80D9141B3E6716001A0E91 /* BYKeywordRecognizer.m in Sources */,
 				BE4D679B1B75BB5700B438A3 /* BYBytorRuntime.m in Sources */,
 				BE80D8E11B3E5FCC001A0E91 /* bytor.xcdatamodeld in Sources */,
+				BE4D67B21B75DA9100B438A3 /* BYColorRecognizer.m in Sources */,
 				BE80D8DE1B3E5FCC001A0E91 /* AppDelegate.m in Sources */,
 				BE4D67981B75A52000B438A3 /* BYStringRecognizer.m in Sources */,
+				BE4D67AF1B75DA7100B438A3 /* BYHexColorToken.m in Sources */,
 				BE4D67AC1B75D57800B438A3 /* BYStyleProperty_border_width.m in Sources */,
 				BE80D8E41B3E5FCC001A0E91 /* ViewController.m in Sources */,
 				BE80D9291B3FB82C001A0E91 /* BYCommentToken.m in Sources */,
@@ -414,9 +436,11 @@
 				BE80D9201B3E844E001A0E91 /* BYNumberToken.m in Sources */,
 				BE80D90B1B3E655A001A0E91 /* BYToken.m in Sources */,
 				BE4D67881B730D7B00B438A3 /* BYBytorParser.m in Sources */,
+				BE4D67B81B75DF2C00B438A3 /* BYStyleProperty_opacity.m in Sources */,
 				BE80D9041B3E608B001A0E91 /* BYTokenizer.m in Sources */,
 				BE80D91D1B3E840F001A0E91 /* BYNumberRecognizer.m in Sources */,
 				BE1B9A771B4B848B0067F266 /* BYStateMachine.m in Sources */,
+				BE4D67B51B75DE7C00B438A3 /* BYStyleProperty_background_color.m in Sources */,
 				BE80D9111B3E65D4001A0E91 /* BYKeywordToken.m in Sources */,
 				BE80D9231B3E9152001A0E91 /* BYWhiteSpaceToken.m in Sources */,
 			);

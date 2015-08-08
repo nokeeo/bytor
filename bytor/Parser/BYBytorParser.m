@@ -12,6 +12,7 @@
 #import "BYWordToken.h"
 #import "BYNumberToken.h"
 #import "BYStringToken.h"
+#import "BYHexColorToken.h"
 
 typedef NS_ENUM(NSInteger, BytorState){
     InitialState,
@@ -82,6 +83,7 @@ typedef NS_ENUM(NSInteger, BytorState){
         
         [self.stateMachine addTransitionWith: WaitingStylePropertyValue class: [BYNumberToken class] finalState: StylePropertyValueFound operation: stylePropertyValueOperation];
         [self.stateMachine addTransitionWith: WaitingStylePropertyValue class: [BYStringToken class] finalState: StylePropertyValueFound operation: stylePropertyValueOperation];
+        [self.stateMachine addTransitionWith: WaitingStylePropertyValue class: [BYHexColorToken class] finalState: StylePropertyValueFound operation: stylePropertyValueOperation];
         
         [self.stateMachine addTransitionWith: StylePropertyValueFound keyword: @";" finalState: StyleDetermined operation:^(NSMutableDictionary * context, BYToken *token) {
             BYStyle *style = [context objectForKey: @"currentStyle"];

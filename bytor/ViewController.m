@@ -14,6 +14,7 @@
 #import "BYWhiteSpaceRecognizer.h"
 #import "BYCommentRecognizer.h"
 #import "BYStringRecognizer.h"
+#import "BYColorRecognizer.h"
 
 #import "BYTokenStream.h"
 #import "BYBytorParser.h"
@@ -41,11 +42,12 @@
     [tokenizer addTokenRecognizer: [[BYKeywordRecognizer alloc] initWith: @","]];
     [tokenizer addTokenRecognizer: [[BYWordRecognizer alloc] init]];
     [tokenizer addTokenRecognizer: [[BYStringRecognizer alloc] init]];
+    [tokenizer addTokenRecognizer: [[BYColorRecognizer alloc] init]];
     [tokenizer addTokenRecognizer: [[BYCommentRecognizer alloc] init]];
     
     [tokenizer addIgnoredTokenRecognizers: [[BYWhiteSpaceRecognizer alloc] init]];
     
-    BYTokenStream *tokenStream = [tokenizer tokenize: @"testView{border-radius:20;border-width:10.5;}"];
+    BYTokenStream *tokenStream = [tokenizer tokenize: @"testView{border-radius:20;border-width:10.5;background-color:#0FB000;opacity:.75;}"];
     
     BYBytorParser *parser = [[BYBytorParser alloc] init];
     BYBytorRuntime *runtime = [parser parse: tokenStream];
