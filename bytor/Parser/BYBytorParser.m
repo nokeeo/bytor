@@ -91,6 +91,9 @@ typedef NS_ENUM(NSInteger, BytorState){
         }];
         
         [self.stateMachine addTransitionWith: StyleDetermined keyword: @"}" finalState: InitialState operation:^(NSMutableDictionary *context, BYToken *token) {
+            BYStyle *style = [context objectForKey: @"currentStyle"];
+            NSString *styleName = [context objectForKey: @"elementName"];
+            [weakSelf.styles setObject: style forKey: styleName];
         }];
         
     }
@@ -103,6 +106,8 @@ typedef NS_ENUM(NSInteger, BytorState){
         BYToken *currentToken = [tokenStream nextToken];
         [self.stateMachine consumeToken: currentToken];
     }
+    NSLog(@"%@", self.variables);
+    NSLog(@"%@", self.styles);
 }
 
 @end
