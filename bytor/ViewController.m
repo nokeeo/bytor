@@ -47,7 +47,10 @@
     
     [tokenizer addIgnoredTokenRecognizers: [[BYWhiteSpaceRecognizer alloc] init]];
     
-    BYTokenStream *tokenStream = [tokenizer tokenize: @"testView{border-radius:20;border-width:10.5;border-color:#0030CC;background-color:#0FB000;opacity:.75;}"];
+    NSString *bytorFilePath = [[NSBundle mainBundle] pathForResource: @"example" ofType: @".bytor"];
+    NSString *bytorCode = [NSString stringWithContentsOfFile: bytorFilePath encoding: NSUTF8StringEncoding error: nil];
+    
+    BYTokenStream *tokenStream = [tokenizer tokenize: bytorCode];
     
     BYBytorParser *parser = [[BYBytorParser alloc] init];
     BYBytorRuntime *runtime = [parser parse: tokenStream];
