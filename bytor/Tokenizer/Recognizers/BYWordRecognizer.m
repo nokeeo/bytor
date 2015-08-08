@@ -24,7 +24,10 @@
     //If the word starts with letters then scan for alphanumerics
     if(![self isStringEmpty: word]) {
         buffer = @"";
-        [scanner scanCharactersFromSet: [NSCharacterSet alphanumericCharacterSet] intoString: &buffer];
+        NSMutableCharacterSet *charSet = [NSMutableCharacterSet characterSetWithCharactersInString: @"-"];
+        [charSet formUnionWithCharacterSet: [NSCharacterSet alphanumericCharacterSet]];
+        
+        [scanner scanCharactersFromSet: charSet intoString: &buffer];
         word = [NSString stringWithFormat: @"%@%@", word, buffer];
         return [[BYWordToken alloc] initWith: word position: position];
     }

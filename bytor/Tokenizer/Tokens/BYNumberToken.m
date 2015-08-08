@@ -10,4 +10,10 @@
 
 @implementation BYNumberToken
 
+-(id) objcValue {
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    formatter.numberStyle = NSNumberFormatterDecimalStyle;
+    return [formatter numberFromString: self.value];
+}
+
 @end

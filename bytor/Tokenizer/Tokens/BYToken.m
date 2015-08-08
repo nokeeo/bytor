@@ -33,4 +33,8 @@
     return [NSString stringWithFormat: @"BYToken with value '%@' at %li", self.value, (long)self.startPosition];
 }
 
+-(id) objcValue {
+    return self.value;
+}
+
 @end

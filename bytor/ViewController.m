@@ -20,6 +20,8 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UIView *testView;
+
 @end
 
 @implementation ViewController
@@ -43,10 +45,11 @@
     
     [tokenizer addIgnoredTokenRecognizers: [[BYWhiteSpaceRecognizer alloc] init]];
     
-    BYTokenStream *tokenStream = [tokenizer tokenize: @"variable = \"10.5\"; style{key:5.5;}"];
+    BYTokenStream *tokenStream = [tokenizer tokenize: @"testView{border-radius:20;}"];
     
     BYBytorParser *parser = [[BYBytorParser alloc] init];
-    [parser parse: tokenStream];
+    BYBytorRuntime *runtime = [parser parse: tokenStream];
+    [runtime applyStyle: @"testView" toView: self.testView];
     
 }
 

@@ -35,4 +35,11 @@
     [self.styles setObject: style forKey: name];
 }
 
+-(void) applyStyle:(NSString *)name toView:(UIView *)view {
+    BYStyle *style = [self.styles objectForKey: name];
+    if(style) {
+        [style applyStyle: view];
+    }
+}
+
 @end

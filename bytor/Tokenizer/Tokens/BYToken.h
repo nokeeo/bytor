@@ -17,4 +17,6 @@
 -(NSInteger) length;
 -(NSInteger) endPosition;
 
+-(id) objcValue;
+
 @end

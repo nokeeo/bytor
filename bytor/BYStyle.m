@@ -7,10 +7,11 @@
 //
 
 #import "BYStyle.h"
+#import "BYStyleProperty.h"
 
 @interface BYStyle()
 
-@property (nonatomic, strong) NSMutableDictionary *styles;
+@property (nonatomic, strong) NSMutableDictionary *properties;
 
 @end
 
@@ -19,14 +20,30 @@
 -(id) init {
     self = [super init];
     if(self) {
-        _styles = [[NSMutableDictionary alloc] init];
+        _properties = [[NSMutableDictionary alloc] init];
     }
     
     return self;
 }
 
 -(void) addStyleProperty: (NSString *) name value: (BYToken *) valueToken {
-    [self.styles setObject: valueToken forKey: name];
+    [self.properties setObject: valueToken forKey: name];
+}
+
+-(void) applyStyle: (UIView *) view {
+    for(NSString *key in [self.properties allKeys]) {
+        Class propertyClassName = [self getClassWithPropertyName: key];
+        BYToken *valueToken = [self.properties objectForKey: key];
+        if(propertyClassName) {
+            id<BYStyleProperty> styleProperty = [[propertyClassName alloc] init];
+            [styleProperty renderPropertyWithView: view value: valueToken.objcValue];
+        }
+    }
+}
+
+#pragma mark - Helper functions
+-(Class) getClassWithPropertyName: (NSString *) name {
+    return NSClassFromString([NSString stringWithFormat: @"BYStyleProperty_%@", name]);
 }
 
 @end

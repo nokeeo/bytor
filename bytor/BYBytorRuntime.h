@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "BYToken.h"
 #import "BYStyle.h"
 
@@ -14,5 +15,7 @@
 
 -(void) addVariable: (NSString *) name value: (BYToken *) value;
 -(void) addStyle: (NSString *) name style: (BYStyle *) style;
+
+-(void) applyStyle: (NSString *) name toView: (UIView *) view;
 
 @end
