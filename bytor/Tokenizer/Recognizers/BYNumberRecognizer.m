@@ -13,7 +13,7 @@
 
 -(BYToken *) scanNextTokenIn:(NSString *)text position:(NSInteger)position {
     
-    NSString *pattern = @"[0-9]*(\\.[0-9]+)?";
+    NSString *pattern = @"\\-?[0-9]*(\\.[0-9]+)?";
     NSError *error;
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern: pattern options: NSRegularExpressionCaseInsensitive error: &error];
     
