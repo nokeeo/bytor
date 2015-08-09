@@ -10,4 +10,8 @@
 
 @implementation BYStringToken
 
+-(id) objcValue {
+    return [self.value stringByReplacingOccurrencesOfString: @"\"" withString: @""];
+}
+
 @end

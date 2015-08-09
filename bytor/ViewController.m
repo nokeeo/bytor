@@ -22,6 +22,7 @@
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UIView *testView;
+@property (weak, nonatomic) IBOutlet UILabel *testLabel;
 
 @end
 
@@ -55,6 +56,7 @@
     BYBytorParser *parser = [[BYBytorParser alloc] init];
     BYBytorRuntime *runtime = [parser parse: tokenStream];
     [runtime applyStyle: @"testView" toView: self.testView];
+    [runtime applyStyle: @"testLabel" toView: self.testLabel];
     
 }
 
