@@ -4,4 +4,6 @@ testView {
     border-color: #0030CC;
     background-color: #0FB000;
     opacity:.75;
+    shadow-color: #FF5C0A;
+    shadow-opacity: 1;
 }

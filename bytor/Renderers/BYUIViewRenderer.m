@@ -36,6 +36,26 @@
     if([style hasProperty: property]) {
         view.layer.cornerRadius = [[style valueForProperty: property] floatValue];
     }
+    
+    property = @"tint-color";
+    if([style hasProperty: property]) {
+        view.tintColor = [style valueForProperty: property];
+    }
+    
+    property = @"shadow-color";
+    if([style hasProperty: property]) {
+        view.layer.shadowColor = [[style valueForProperty: property] CGColor];
+    }
+    
+    property = @"shadow-opacity";
+    if([style hasProperty: property]) {
+        view.layer.shadowOpacity = [[style valueForProperty: property] floatValue];
+    }
+    
+    property = @"shadow-radius";
+    if([style hasProperty: property]) {
+        view.layer.shadowRadius = [[style valueForProperty: property] floatValue];
+    }
 }
 
 @end

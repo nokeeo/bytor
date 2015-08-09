@@ -25,8 +25,8 @@
     return self;
 }
 
--(void) addStyleProperty: (NSString *) name value: (BYToken *) valueToken {
-    [self.properties setObject: valueToken forKey: name];
+-(void) addStyleProperty: (NSString *) name value: (NSArray *) valueTokens {
+    [self.properties setObject: valueTokens forKey: name];
     NSLog(@"%@", self.properties);
 }
 
@@ -35,7 +35,21 @@
 }
 
 -(id) valueForProperty:(NSString *) name {
-    return [[self.properties valueForKey: name] objcValue];
+    NSArray *collection = [self.properties objectForKey: name];
+    if(collection) {
+        if([collection count] > 1) {
+            NSMutableArray *objcValues = [NSMutableArray array];
+            for(BYToken *token in collection) {
+                [objcValues addObject: [token objcValue]];
+            }
+            return objcValues;
+        }
+        else if([collection count] > 0){
+            return [[collection objectAtIndex: 0] objcValue];
+        }
+    }
+    return nil;
+    //return [[self.properties valueForKey: name] objcValue];
 }
 
 #pragma mark - Helper functions

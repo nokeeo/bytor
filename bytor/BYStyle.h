@@ -11,7 +11,7 @@
 
 @interface BYStyle : NSObject
 
--(void) addStyleProperty: (NSString *) name value: (BYToken *) valueToken;
+-(void) addStyleProperty: (NSString *) name value: (NSArray *) valueTokens;
 
 -(BOOL) hasProperty: (NSString *) property;
 -(id) valueForProperty: (NSString *) name;
