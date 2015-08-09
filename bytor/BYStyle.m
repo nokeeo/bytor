@@ -7,7 +7,6 @@
 //
 
 #import "BYStyle.h"
-#import "BYStyleProperty.h"
 
 @interface BYStyle()
 
@@ -29,17 +28,6 @@
 -(void) addStyleProperty: (NSString *) name value: (BYToken *) valueToken {
     [self.properties setObject: valueToken forKey: name];
     NSLog(@"%@", self.properties);
-}
-
--(void) applyStyle: (UIView *) view {
-    for(NSString *key in [self.properties allKeys]) {
-        Class propertyClassName = [self getClassWithPropertyName: key];
-        BYToken *valueToken = [self.properties objectForKey: key];
-        if(propertyClassName) {
-            id<BYStyleProperty> styleProperty = [[propertyClassName alloc] init];
-            [styleProperty renderPropertyWithView: view value: valueToken.objcValue];
-        }
-    }
 }
 
 -(BOOL) hasProperty: (NSString *) property {
