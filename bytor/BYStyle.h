@@ -15,4 +15,7 @@
 -(void) addStyleProperty: (NSString *) name value: (BYToken *) valueToken;
 -(void) applyStyle: (UIView *) view;
 
+-(BOOL) hasProperty: (NSString *) property;
+-(id) valueForProperty: (NSString *) name;
+
 @end

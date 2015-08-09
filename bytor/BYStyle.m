@@ -28,6 +28,7 @@
 
 -(void) addStyleProperty: (NSString *) name value: (BYToken *) valueToken {
     [self.properties setObject: valueToken forKey: name];
+    NSLog(@"%@", self.properties);
 }
 
 -(void) applyStyle: (UIView *) view {
@@ -39,6 +40,14 @@
             [styleProperty renderPropertyWithView: view value: valueToken.objcValue];
         }
     }
+}
+
+-(BOOL) hasProperty: (NSString *) property {
+    return [self.properties objectForKey: property] != nil;
+}
+
+-(id) valueForProperty:(NSString *) name {
+    return [[self.properties valueForKey: name] objcValue];
 }
 
 #pragma mark - Helper functions

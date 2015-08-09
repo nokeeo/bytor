@@ -3,5 +3,5 @@ testView {
     border-width: 10.5;
     border-color: #0030CC;
     background-color: #0FB000;
-    opacity: .75;
+    opacity:.75;
 }

@@ -71,8 +71,8 @@ typedef NS_ENUM(NSInteger, BytorState){
         }];
         
         [self.stateMachine addTransitionWith: StyleDetermined class: [BYWordToken class] finalState: StylePropertyFound operation:^(NSMutableDictionary *context, BYToken *token) {
-            NSString *sanitizedPropertyName = [token.value stringByReplacingOccurrencesOfString: @"-" withString: @"_"];
-            [context setObject: sanitizedPropertyName forKey: @"currentStyleProperty"];
+//            NSString *sanitizedPropertyName = [token.value stringByReplacingOccurrencesOfString: @"-" withString: @"_"];
+            [context setObject: token.value forKey: @"currentStyleProperty"];
         }];
         
         [self.stateMachine addTransitionWith: StylePropertyFound keyword: @":" finalState: WaitingStylePropertyValue operation:nil];
