@@ -32,6 +32,10 @@
     [self.variables setObject: value forKey: name];
 }
 
+-(BYToken *) getTokenValueForVariable:(NSString *)variableName {
+    return [self.variables objectForKey: variableName];
+}
+
 -(void) addStyle:(NSString *)name style:(BYStyle *)style {
     [self.styles setObject: style forKey: name];
 }

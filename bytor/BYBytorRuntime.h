@@ -14,8 +14,9 @@
 @interface BYBytorRuntime : NSObject
 
 -(void) addVariable: (NSString *) name value: (BYToken *) value;
--(void) addStyle: (NSString *) name style: (BYStyle *) style;
+-(BYToken *) getTokenValueForVariable: (NSString *) variableName;
 
+-(void) addStyle: (NSString *) name style: (BYStyle *) style;
 -(void) applyStyle: (NSString *) name toView: (UIView *) view;
 
 @end

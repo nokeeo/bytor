@@ -55,9 +55,9 @@ typedef NS_ENUM(NSInteger, BytorState){
         BYTransitionOperation variableValueOperation = ^(NSMutableDictionary *context, BYToken *token) {
             [context setObject: token forKey:@"variable"];
         };
+
+        [self addValueParsingTransitionsWith: VariableDetermined endState: ValueOfVariableDetermined operation: variableValueOperation];
         
-        [self.stateMachine addTransitionWith: VariableDetermined class: [BYNumberToken class] finalState: ValueOfVariableDetermined operation: variableValueOperation];
-        [self.stateMachine addTransitionWith: VariableDetermined class: [BYStringToken class] finalState: ValueOfVariableDetermined operation: variableValueOperation];
         
         [self.stateMachine addTransitionWith: ValueOfVariableDetermined keyword: @";" finalState: InitialState operation:^(NSMutableDictionary *context, BYToken *token){
             //Commit Variable to variable dictionary.
@@ -71,7 +71,6 @@ typedef NS_ENUM(NSInteger, BytorState){
         }];
         
         [self.stateMachine addTransitionWith: StyleDetermined class: [BYWordToken class] finalState: StylePropertyFound operation:^(NSMutableDictionary *context, BYToken *token) {
-//            NSString *sanitizedPropertyName = [token.value stringByReplacingOccurrencesOfString: @"-" withString: @"_"];
             [context removeObjectForKey: @"currentStylePropertyValue"];
             [context setObject: token.value forKey: @"currentStyleProperty"];
         }];
@@ -127,6 +126,15 @@ typedef NS_ENUM(NSInteger, BytorState){
     [self.stateMachine addTransitionWith: start class: [BYNumberToken class] finalState: end operation: operation];
     [self.stateMachine addTransitionWith: start class: [BYStringToken class] finalState: end operation: operation];
     [self.stateMachine addTransitionWith: start class: [BYHexColorToken class] finalState: end operation: operation];
+    
+    //If the value is a variable
+    __weak typeof(self) weakSelf = self;
+    [self.stateMachine addTransitionWith: start class: [BYWordToken class] finalState: end operation:^(NSMutableDictionary *context, BYToken *token) {
+        BYToken *variableValue = [weakSelf.bytorRuntime getTokenValueForVariable: token.value];
+        if(variableValue) {
+            operation(context, variableValue);
+        }
+    }];
 }
 
 @end
