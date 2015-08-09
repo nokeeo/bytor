@@ -6,4 +6,5 @@ testView {
     opacity:.75;
     shadow-color: #FF5C0A;
     shadow-opacity: 1;
+    shadow-offset: 1 10;
 }

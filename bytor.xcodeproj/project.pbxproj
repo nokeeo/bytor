@@ -19,6 +19,7 @@
 		BE4D67B21B75DA9100B438A3 /* BYColorRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D67B11B75DA9100B438A3 /* BYColorRecognizer.m */; };
 		BE4D67BF1B75E18300B438A3 /* example.bytor in Resources */ = {isa = PBXBuildFile; fileRef = BE4D67BE1B75E18300B438A3 /* example.bytor */; };
 		BE4D67C41B77220900B438A3 /* BYUIViewRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D67C31B77220900B438A3 /* BYUIViewRenderer.m */; };
+		BE4D67C71B773D3F00B438A3 /* BYRendererUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D67C61B773D3F00B438A3 /* BYRendererUtility.m */; };
 		BE80D8DB1B3E5FCC001A0E91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D8DA1B3E5FCC001A0E91 /* main.m */; };
 		BE80D8DE1B3E5FCC001A0E91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D8DD1B3E5FCC001A0E91 /* AppDelegate.m */; };
 		BE80D8E11B3E5FCC001A0E91 /* bytor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE80D8DF1B3E5FCC001A0E91 /* bytor.xcdatamodeld */; };
@@ -76,6 +77,8 @@
 		BE4D67C11B7720F200B438A3 /* BYBytorRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BYBytorRenderer.h; path = Renderers/BYBytorRenderer.h; sourceTree = "<group>"; };
 		BE4D67C21B77220900B438A3 /* BYUIViewRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYUIViewRenderer.h; path = Renderers/BYUIViewRenderer.h; sourceTree = "<group>"; };
 		BE4D67C31B77220900B438A3 /* BYUIViewRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYUIViewRenderer.m; path = Renderers/BYUIViewRenderer.m; sourceTree = "<group>"; };
+		BE4D67C51B773D3F00B438A3 /* BYRendererUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYRendererUtility.h; path = Renderers/BYRendererUtility.h; sourceTree = "<group>"; };
+		BE4D67C61B773D3F00B438A3 /* BYRendererUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYRendererUtility.m; path = Renderers/BYRendererUtility.m; sourceTree = "<group>"; };
 		BE80D8D51B3E5FCC001A0E91 /* bytor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bytor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE80D8D91B3E5FCC001A0E91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE80D8DA1B3E5FCC001A0E91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -173,6 +176,8 @@
 				BE4D67C11B7720F200B438A3 /* BYBytorRenderer.h */,
 				BE4D67C21B77220900B438A3 /* BYUIViewRenderer.h */,
 				BE4D67C31B77220900B438A3 /* BYUIViewRenderer.m */,
+				BE4D67C51B773D3F00B438A3 /* BYRendererUtility.h */,
+				BE4D67C61B773D3F00B438A3 /* BYRendererUtility.m */,
 			);
 			name = Renderers;
 			sourceTree = "<group>";
@@ -418,6 +423,7 @@
 				BE80D9261B3E9179001A0E91 /* BYWhiteSpaceRecognizer.m in Sources */,
 				BE4D67921B744DA800B438A3 /* BYStyle.m in Sources */,
 				BE4D67951B75A4A500B438A3 /* BYStringToken.m in Sources */,
+				BE4D67C71B773D3F00B438A3 /* BYRendererUtility.m in Sources */,
 				BE80D9171B3E7B63001A0E91 /* BYWordRecognizer.m in Sources */,
 				BE80D8DB1B3E5FCC001A0E91 /* main.m in Sources */,
 				BE80D9201B3E844E001A0E91 /* BYNumberToken.m in Sources */,

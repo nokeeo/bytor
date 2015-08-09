@@ -88,9 +88,8 @@ typedef NS_ENUM(NSInteger, BytorState){
             [context setObject: collectionValues forKey: @"currentStylePropertyValue"];
         };
         
-        [self.stateMachine addTransitionWith: WaitingStylePropertyValue class: [BYNumberToken class] finalState: StylePropertyValueFound operation: stylePropertyValueOperation];
-        [self.stateMachine addTransitionWith: WaitingStylePropertyValue class: [BYStringToken class] finalState: StylePropertyValueFound operation: stylePropertyValueOperation];
-        [self.stateMachine addTransitionWith: WaitingStylePropertyValue class: [BYHexColorToken class] finalState: StylePropertyValueFound operation: stylePropertyValueOperation];
+        [self addValueParsingTransitionsWith: WaitingStylePropertyValue endState: StylePropertyValueFound operation: stylePropertyValueOperation];
+        [self addValueParsingTransitionsWith: StylePropertyValueFound endState: StylePropertyValueFound operation: stylePropertyValueOperation];
         
         [self.stateMachine addTransitionWith: StylePropertyValueFound keyword: @";" finalState: StyleDetermined operation:^(NSMutableDictionary * context, BYToken *token) {
             BYStyle *style = [context objectForKey: @"currentStyle"];
@@ -121,6 +120,13 @@ typedef NS_ENUM(NSInteger, BytorState){
     }
     
     return nil;
+}
+
+#pragma mark - Helper Functions
+-(void) addValueParsingTransitionsWith:(NSInteger) start endState: (NSInteger) end operation: (BYTransitionOperation) operation {
+    [self.stateMachine addTransitionWith: start class: [BYNumberToken class] finalState: end operation: operation];
+    [self.stateMachine addTransitionWith: start class: [BYStringToken class] finalState: end operation: operation];
+    [self.stateMachine addTransitionWith: start class: [BYHexColorToken class] finalState: end operation: operation];
 }
 
 @end

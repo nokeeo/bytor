@@ -7,6 +7,7 @@
 //
 
 #import "BYUIViewRenderer.h"
+#import "BYRendererUtility.h"
 
 @implementation BYUIViewRenderer
 
@@ -55,6 +56,13 @@
     property = @"shadow-radius";
     if([style hasProperty: property]) {
         view.layer.shadowRadius = [[style valueForProperty: property] floatValue];
+    }
+    
+    property = @"shadow-offset";
+    if([style hasProperty: property]) {
+        NSArray *sizeValues = [style valueForProperty: property];
+        CGSize offset = [BYRendererUtility sizeFromValues: sizeValues];
+        view.layer.shadowOffset = offset;
     }
 }
 
