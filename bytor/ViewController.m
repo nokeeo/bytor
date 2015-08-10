@@ -46,8 +46,8 @@
     [tokenizer addTokenRecognizer: [[BYWordRecognizer alloc] init]];
     [tokenizer addTokenRecognizer: [[BYStringRecognizer alloc] init]];
     [tokenizer addTokenRecognizer: [[BYColorRecognizer alloc] init]];
-    [tokenizer addTokenRecognizer: [[BYCommentRecognizer alloc] init]];
     
+    [tokenizer addIgnoredTokenRecognizers: [[BYCommentRecognizer alloc] init]];
     [tokenizer addIgnoredTokenRecognizers: [[BYWhiteSpaceRecognizer alloc] init]];
     
     NSString *bytorFilePath = [[NSBundle mainBundle] pathForResource: @"example" ofType: @".bytor"];

@@ -5,6 +5,7 @@ fontColor = #0FB000;
 superStyle {
     background-color: fontColor;
     border-radius: 20;
+    border-color: fontColor;
 }
 
 superStyle2 {
