@@ -36,6 +36,14 @@
     return [self.variables objectForKey: variableName];
 }
 
+-(BOOL) isStyleDefined:(NSString *)styleName {
+    return [self.styles objectForKey: styleName] != nil;
+}
+
+-(BYStyle *) styleForName:(NSString *)styleName {
+    return [self.styles objectForKey: styleName];
+}
+
 -(void) addStyle:(NSString *)name style:(BYStyle *)style {
     [self.styles setObject: style forKey: name];
 }

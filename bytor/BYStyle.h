@@ -12,6 +12,9 @@
 
 @interface BYStyle : NSObject
 
+-(void) addParentStyle: (BYStyle *) parentStyle;
+-(NSArray *) parentStyles;
+
 -(void) addStyleProperty: (NSString *) name value: (NSArray *) valueTokens;
 
 -(BOOL) hasProperty: (NSString *) property;

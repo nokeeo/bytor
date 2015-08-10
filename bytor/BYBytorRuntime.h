@@ -16,6 +16,9 @@
 -(void) addVariable: (NSString *) name value: (BYToken *) value;
 -(BYToken *) getTokenValueForVariable: (NSString *) variableName;
 
+-(BOOL) isStyleDefined: (NSString *) styleName;
+-(BYStyle *) styleForName: (NSString *) styleName;
+
 -(void) addStyle: (NSString *) name style: (BYStyle *) style;
 -(void) applyStyle: (NSString *) name toView: (UIView *) view;
 

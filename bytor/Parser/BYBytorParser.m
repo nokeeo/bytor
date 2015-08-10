@@ -20,6 +20,8 @@ typedef NS_ENUM(NSInteger, BytorState){
     VariableDetermined,
     ValueOfVariableDetermined,
     StyleDetermined,
+    WaitingForSuperStyle,
+    SuperStyleFound,
     StylePropertyFound,
     WaitingStylePropertyValue,
     StylePropertyValueFound,
@@ -66,9 +68,24 @@ typedef NS_ENUM(NSInteger, BytorState){
         }];
         
         //Style Parsing
-        [self.stateMachine addTransitionWith: DeterminingVariableOrStyle keyword: @"{" finalState: StyleDetermined operation:^(NSMutableDictionary *context, BYToken *token) {
+        
+        BYTransitionOperation styleDeterminedOperation = ^(NSMutableDictionary *context, BYToken *token) {
             [context setObject: [[BYStyle alloc] init] forKey: @"currentStyle"];
+        };
+        
+        [self.stateMachine addTransitionWith: DeterminingVariableOrStyle keyword: @"|" finalState: WaitingForSuperStyle operation: styleDeterminedOperation];
+        [self.stateMachine addTransitionWith: WaitingForSuperStyle class: [BYWordToken class] finalState: SuperStyleFound operation:^(NSMutableDictionary *context, BYToken *token) {
+            if([weakSelf.bytorRuntime isStyleDefined: token.value]) {
+                BYStyle *parentStyle = [weakSelf.bytorRuntime styleForName: token.value];
+                BYStyle *currentStyle = [context objectForKey: @"currentStyle"];
+                [currentStyle addParentStyle: parentStyle];
+            }
         }];
+        [self.stateMachine addTransitionWith: SuperStyleFound keyword: @"," finalState: WaitingForSuperStyle operation: nil];
+        
+        [self.stateMachine addTransitionWith: SuperStyleFound keyword: @"{" finalState: StyleDetermined operation: nil];
+        
+        [self.stateMachine addTransitionWith: DeterminingVariableOrStyle keyword: @"{" finalState: StyleDetermined operation: styleDeterminedOperation];
         
         [self.stateMachine addTransitionWith: StyleDetermined class: [BYWordToken class] finalState: StylePropertyFound operation:^(NSMutableDictionary *context, BYToken *token) {
             [context removeObjectForKey: @"currentStylePropertyValue"];

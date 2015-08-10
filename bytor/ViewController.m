@@ -57,7 +57,7 @@
     
     BYBytorParser *parser = [[BYBytorParser alloc] init];
     BYBytorRuntime *runtime = [parser parse: tokenStream];
-    [runtime applyStyle: @"testView" toView: self.testView];
+    [runtime applyStyle: @"subStyle" toView: self.testView];
     [runtime applyStyle: @"testLabel" toView: self.testLabel];
     [runtime applyStyle: @"testButton" toView: self.testButton];
     [runtime applyStyle: @"testTextField" toView: self.testTextField];

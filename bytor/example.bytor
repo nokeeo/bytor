@@ -2,7 +2,21 @@ testVar = 15;
 font = "Trebuchet-BoldItalic";
 fontColor = #0FB000;
 
-testView {
+superStyle {
+    background-color: fontColor;
+    border-radius: 20;
+}
+
+superStyle2 {
+    opacity: .25;
+}
+
+subStyle | superStyle, superStyle2 {
+    border-color: #FF430F;
+    border-width: 2;
+}
+
+/*testView {
     border-radius: 20;
     border-width: 10.5;
     border-color: #0030CC;
@@ -30,4 +44,4 @@ testTextField {
     text-size: 21;
     text-color: fontColor;
     text-alignment: "center";
-}
+}*/

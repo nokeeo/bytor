@@ -20,6 +20,12 @@
         operation(value);
         [style setRenderedProperty: property];
     }
+    else {
+        //Check to see if parents have given property
+        for(BYStyle *parentStyle in style.parentStyles) {
+            [self renderProperty: property withStyle: parentStyle withOperation: operation];
+        }
+    }
 }
 
 @end

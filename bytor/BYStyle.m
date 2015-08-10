@@ -10,6 +10,7 @@
 
 @interface BYStyle()
 
+@property (nonatomic, strong) NSMutableArray *parentStyles;
 @property (nonatomic, strong) NSMutableDictionary *properties;
 
 @end
@@ -20,9 +21,19 @@
     self = [super init];
     if(self) {
         _properties = [[NSMutableDictionary alloc] init];
+        _parentStyles = [[NSMutableArray alloc] init];
     }
     
     return self;
+}
+
+-(void) addParentStyle:(BYStyle *)parentStyle {
+    //Pushes the parent style on the the parent stack
+    [_parentStyles insertObject: parentStyle atIndex: 0];
+}
+
+-(NSArray *) parentStyles {
+    return _parentStyles;
 }
 
 -(void) addStyleProperty: (NSString *) name value: (NSArray *) valueTokens {
@@ -51,11 +62,6 @@
         BYStyleProperty *styleProperty = [self.properties objectForKey: property];
         styleProperty.isRendered = YES;
     }
-}
-
-#pragma mark - Helper functions
--(Class) getClassWithPropertyName: (NSString *) name {
-    return NSClassFromString([NSString stringWithFormat: @"BYStyleProperty_%@", name]);
 }
 
 @end
