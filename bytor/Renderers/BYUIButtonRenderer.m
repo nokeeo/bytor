@@ -62,6 +62,27 @@
         view.imageEdgeInsets = insets;
     }];
     
+    //Image
+    [self renderProperty: @"image" withStyle: style withOperation:^(id value) {
+        UIImage *image = [UIImage imageNamed: value];
+        [view setImage: image forState: UIControlStateNormal];
+    }];
+    
+    [self renderProperty: @"image-highlighted" withStyle: style withOperation:^(id value) {
+        UIImage *image = [UIImage imageNamed: value];
+        [view setImage: image forState: UIControlStateHighlighted];
+    }];
+    
+    [self renderProperty: @"image-disabled" withStyle: style withOperation:^(id value) {
+        UIImage *image = [UIImage imageNamed: value];
+        [view setImage: image forState: UIControlStateDisabled];
+    }];
+    
+    [self renderProperty: @"image-selected" withStyle: style withOperation:^(id value) {
+        UIImage *image = [UIImage imageNamed: value];
+        [view setImage: image forState: UIControlStateSelected];
+    }];
+    
     [super renderView: view withStyle: style];
 }
 
