@@ -21,6 +21,8 @@
 		BE4D67C41B77220900B438A3 /* BYUIViewRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D67C31B77220900B438A3 /* BYUIViewRenderer.m */; };
 		BE4D67C71B773D3F00B438A3 /* BYRendererUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D67C61B773D3F00B438A3 /* BYRendererUtility.m */; };
 		BE4D67CA1B7748C300B438A3 /* BYUILabelRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D67C91B7748C300B438A3 /* BYUILabelRenderer.m */; };
+		BE4D67CD1B78328B00B438A3 /* BYUIButtonRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D67CC1B78328B00B438A3 /* BYUIButtonRenderer.m */; };
+		BE4D67CF1B783F8B00B438A3 /* dog.png in Resources */ = {isa = PBXBuildFile; fileRef = BE4D67CE1B783F8B00B438A3 /* dog.png */; };
 		BE80D8DB1B3E5FCC001A0E91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D8DA1B3E5FCC001A0E91 /* main.m */; };
 		BE80D8DE1B3E5FCC001A0E91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D8DD1B3E5FCC001A0E91 /* AppDelegate.m */; };
 		BE80D8E11B3E5FCC001A0E91 /* bytor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE80D8DF1B3E5FCC001A0E91 /* bytor.xcdatamodeld */; };
@@ -82,6 +84,9 @@
 		BE4D67C61B773D3F00B438A3 /* BYRendererUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYRendererUtility.m; path = Renderers/BYRendererUtility.m; sourceTree = "<group>"; };
 		BE4D67C81B7748C300B438A3 /* BYUILabelRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYUILabelRenderer.h; path = Renderers/BYUILabelRenderer.h; sourceTree = "<group>"; };
 		BE4D67C91B7748C300B438A3 /* BYUILabelRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYUILabelRenderer.m; path = Renderers/BYUILabelRenderer.m; sourceTree = "<group>"; };
+		BE4D67CB1B78328B00B438A3 /* BYUIButtonRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYUIButtonRenderer.h; path = Renderers/BYUIButtonRenderer.h; sourceTree = "<group>"; };
+		BE4D67CC1B78328B00B438A3 /* BYUIButtonRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYUIButtonRenderer.m; path = Renderers/BYUIButtonRenderer.m; sourceTree = "<group>"; };
+		BE4D67CE1B783F8B00B438A3 /* dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog.png; sourceTree = "<group>"; };
 		BE80D8D51B3E5FCC001A0E91 /* bytor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bytor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE80D8D91B3E5FCC001A0E91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE80D8DA1B3E5FCC001A0E91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -181,6 +186,8 @@
 				BE4D67C31B77220900B438A3 /* BYUIViewRenderer.m */,
 				BE4D67C81B7748C300B438A3 /* BYUILabelRenderer.h */,
 				BE4D67C91B7748C300B438A3 /* BYUILabelRenderer.m */,
+				BE4D67CB1B78328B00B438A3 /* BYUIButtonRenderer.h */,
+				BE4D67CC1B78328B00B438A3 /* BYUIButtonRenderer.m */,
 				BE4D67C51B773D3F00B438A3 /* BYRendererUtility.h */,
 				BE4D67C61B773D3F00B438A3 /* BYRendererUtility.m */,
 			);
@@ -218,6 +225,7 @@
 				BE80D8E31B3E5FCC001A0E91 /* ViewController.m */,
 				BE4D67BE1B75E18300B438A3 /* example.bytor */,
 				BE80D8E51B3E5FCC001A0E91 /* Main.storyboard */,
+				BE4D67CE1B783F8B00B438A3 /* dog.png */,
 				BE80D8E81B3E5FCC001A0E91 /* Images.xcassets */,
 				BE80D8EA1B3E5FCC001A0E91 /* LaunchScreen.xib */,
 				BE80D8DF1B3E5FCC001A0E91 /* bytor.xcdatamodeld */,
@@ -393,6 +401,7 @@
 			files = (
 				BE80D8E71B3E5FCC001A0E91 /* Main.storyboard in Resources */,
 				BE80D8EC1B3E5FCC001A0E91 /* LaunchScreen.xib in Resources */,
+				BE4D67CF1B783F8B00B438A3 /* dog.png in Resources */,
 				BE80D8E91B3E5FCC001A0E91 /* Images.xcassets in Resources */,
 				BE4D67BF1B75E18300B438A3 /* example.bytor in Resources */,
 			);
@@ -429,6 +438,7 @@
 				BE80D9261B3E9179001A0E91 /* BYWhiteSpaceRecognizer.m in Sources */,
 				BE4D67921B744DA800B438A3 /* BYStyle.m in Sources */,
 				BE4D67951B75A4A500B438A3 /* BYStringToken.m in Sources */,
+				BE4D67CD1B78328B00B438A3 /* BYUIButtonRenderer.m in Sources */,
 				BE4D67C71B773D3F00B438A3 /* BYRendererUtility.m in Sources */,
 				BE80D9171B3E7B63001A0E91 /* BYWordRecognizer.m in Sources */,
 				BE80D8DB1B3E5FCC001A0E91 /* main.m in Sources */,

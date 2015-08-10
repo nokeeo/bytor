@@ -22,4 +22,17 @@
     return CGSizeZero;
 }
 
++(UIEdgeInsets) insetsFromValues:(NSArray *)values {
+    if([values count] == 4) {
+        CGFloat top = [[values objectAtIndex: 0] floatValue];
+        CGFloat left = [[values objectAtIndex: 1] floatValue];
+        CGFloat bottom = [[values objectAtIndex: 2] floatValue];
+        CGFloat right = [[values objectAtIndex: 3] floatValue];
+        
+        return UIEdgeInsetsMake(top, left, bottom, right);
+    }
+    
+    return UIEdgeInsetsZero;
+}
+
 @end

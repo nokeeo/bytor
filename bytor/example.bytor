@@ -9,10 +9,16 @@ testView {
     shadow-color: #FF5C0A;
     shadow-opacity: 1;
     shadow-offset: testVar testVar;
+    background-image: "dog.png";
 }
 
 testLabel {
     font: "Trebuchet-BoldItalic";
     text-align: "center";
     text-color: #0FB000;
+}
+
+testButton {
+    text-color: #0FB000;
+    text-color-highlighted: #FF430F;
 }

@@ -23,6 +23,7 @@
 
 @property (weak, nonatomic) IBOutlet UIView *testView;
 @property (weak, nonatomic) IBOutlet UILabel *testLabel;
+@property (weak, nonatomic) IBOutlet UIButton *testButton;
 
 @end
 
@@ -57,6 +58,7 @@
     BYBytorRuntime *runtime = [parser parse: tokenStream];
     [runtime applyStyle: @"testView" toView: self.testView];
     [runtime applyStyle: @"testLabel" toView: self.testLabel];
+    [runtime applyStyle: @"testButton" toView: self.testButton];
     
 }
 
