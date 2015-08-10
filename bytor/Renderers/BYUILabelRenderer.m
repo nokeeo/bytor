@@ -36,6 +36,11 @@
             view.textAlignment = textAlign;
         }
     }
+    
+    property = @"text-color";
+    if([style hasProperty: property]) {
+        view.textColor = [style valueForProperty: property];
+    }
 }
 
 #pragma mark - Helper Function

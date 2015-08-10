@@ -14,4 +14,5 @@ testView {
 testLabel {
     font: "Trebuchet-BoldItalic";
     text-align: "center";
+    text-color: #0FB000;
 }
