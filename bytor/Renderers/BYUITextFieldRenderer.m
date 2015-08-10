@@ -38,6 +38,10 @@
         view.borderStyle = [BYRendererUtility textBorderStyleForString: value];
     }];
     
+    [self renderProperty: @"background-image" withStyle: style withOperation:^(id value) {
+        view.background = [UIImage imageNamed: value];
+    }];
+    
     [super renderView: view withStyle: style];
 }
 
