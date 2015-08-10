@@ -84,4 +84,19 @@
     }
 }
 
++(UITextBorderStyle) textBorderStyleForString:(NSString *)value {
+    if([value isEqual: @"solid"]) {
+        return UITextBorderStyleLine;
+    }
+    else if([value isEqual: @"bezel"]) {
+        return UITextBorderStyleBezel;
+    }
+    else if([value isEqual: @"round"]) {
+        return UITextBorderStyleRoundedRect;
+    }
+    else {
+        return UITextBorderStyleNone;
+    }
+}
+
 @end

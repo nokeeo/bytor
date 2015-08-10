@@ -26,6 +26,7 @@
 		BE4D67D21B7844A900B438A3 /* BYRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D67D11B7844A900B438A3 /* BYRenderer.m */; };
 		BE4D67D61B785BB400B438A3 /* BYStyleProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D67D51B785BB400B438A3 /* BYStyleProperty.m */; };
 		BE4D67D91B7869BF00B438A3 /* BYUIControlRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D67D81B7869BF00B438A3 /* BYUIControlRenderer.m */; };
+		BE4D67DC1B786D2B00B438A3 /* BYUITextFieldRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D67DB1B786D2B00B438A3 /* BYUITextFieldRenderer.m */; };
 		BE80D8DB1B3E5FCC001A0E91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D8DA1B3E5FCC001A0E91 /* main.m */; };
 		BE80D8DE1B3E5FCC001A0E91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D8DD1B3E5FCC001A0E91 /* AppDelegate.m */; };
 		BE80D8E11B3E5FCC001A0E91 /* bytor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE80D8DF1B3E5FCC001A0E91 /* bytor.xcdatamodeld */; };
@@ -96,6 +97,8 @@
 		BE4D67D51B785BB400B438A3 /* BYStyleProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYStyleProperty.m; sourceTree = "<group>"; };
 		BE4D67D71B7869BF00B438A3 /* BYUIControlRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYUIControlRenderer.h; path = Renderers/BYUIControlRenderer.h; sourceTree = "<group>"; };
 		BE4D67D81B7869BF00B438A3 /* BYUIControlRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYUIControlRenderer.m; path = Renderers/BYUIControlRenderer.m; sourceTree = "<group>"; };
+		BE4D67DA1B786D2B00B438A3 /* BYUITextFieldRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYUITextFieldRenderer.h; path = Renderers/BYUITextFieldRenderer.h; sourceTree = "<group>"; };
+		BE4D67DB1B786D2B00B438A3 /* BYUITextFieldRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYUITextFieldRenderer.m; path = Renderers/BYUITextFieldRenderer.m; sourceTree = "<group>"; };
 		BE80D8D51B3E5FCC001A0E91 /* bytor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bytor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE80D8D91B3E5FCC001A0E91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE80D8DA1B3E5FCC001A0E91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -203,6 +206,8 @@
 				BE4D67D81B7869BF00B438A3 /* BYUIControlRenderer.m */,
 				BE4D67CB1B78328B00B438A3 /* BYUIButtonRenderer.h */,
 				BE4D67CC1B78328B00B438A3 /* BYUIButtonRenderer.m */,
+				BE4D67DA1B786D2B00B438A3 /* BYUITextFieldRenderer.h */,
+				BE4D67DB1B786D2B00B438A3 /* BYUITextFieldRenderer.m */,
 				BE4D67C51B773D3F00B438A3 /* BYRendererUtility.h */,
 				BE4D67C61B773D3F00B438A3 /* BYRendererUtility.m */,
 			);
@@ -449,6 +454,7 @@
 				BE80D8E41B3E5FCC001A0E91 /* ViewController.m in Sources */,
 				BE80D9291B3FB82C001A0E91 /* BYCommentToken.m in Sources */,
 				BE4D678C1B73165100B438A3 /* BYTokenStream.m in Sources */,
+				BE4D67DC1B786D2B00B438A3 /* BYUITextFieldRenderer.m in Sources */,
 				BE80D92C1B3FB84F001A0E91 /* BYCommentRecognizer.m in Sources */,
 				BE4D67841B7302FF00B438A3 /* BYTransition.m in Sources */,
 				BE80D9261B3E9179001A0E91 /* BYWhiteSpaceRecognizer.m in Sources */,

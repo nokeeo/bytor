@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIView *testView;
 @property (weak, nonatomic) IBOutlet UILabel *testLabel;
 @property (weak, nonatomic) IBOutlet UIButton *testButton;
+@property (weak, nonatomic) IBOutlet UITextField *testTextField;
 
 @end
 
@@ -59,6 +60,7 @@
     [runtime applyStyle: @"testView" toView: self.testView];
     [runtime applyStyle: @"testLabel" toView: self.testLabel];
     [runtime applyStyle: @"testButton" toView: self.testButton];
+    [runtime applyStyle: @"testTextField" toView: self.testTextField];
     
 }
 

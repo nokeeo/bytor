@@ -32,12 +32,18 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XZP-4u-Uxk">
+                                <rect key="frame" x="24" y="382" width="227" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="testButton" destination="8Mc-NV-oPm" id="lpO-gw-mtM"/>
                         <outlet property="testLabel" destination="YNf-za-31C" id="ilh-SU-lBh"/>
+                        <outlet property="testTextField" destination="XZP-4u-Uxk" id="6ph-RH-Lx0"/>
                         <outlet property="testView" destination="7RG-WV-B9d" id="uda-UW-vmC"/>
                     </connections>
                 </viewController>

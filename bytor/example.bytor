@@ -1,4 +1,6 @@
 testVar = 15;
+font = "Trebuchet-BoldItalic";
+fontColor = #0FB000;
 
 testView {
     border-radius: 20;
@@ -13,12 +15,19 @@ testView {
 }
 
 testLabel {
-    font: "Trebuchet-BoldItalic";
+    font: font;
     text-align: "center";
-    text-color: #0FB000;
+    text-color: fontColor;
 }
 
 testButton {
     background-color: #0030CC;
     vertical-align: "bottom";
+}
+
+testTextField {
+    font: font;
+    text-size: 21;
+    text-color: fontColor;
+    text-alignment: "center";
 }

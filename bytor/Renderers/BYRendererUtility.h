@@ -16,5 +16,6 @@
 +(NSTextAlignment) textAlignmentForString: (NSString *) value;
 +(UIControlContentHorizontalAlignment) horizontalAlignmentForString: (NSString *) value;
 +(UIControlContentVerticalAlignment) verticalAlignmentForString: (NSString *) value;
++(UITextBorderStyle) textBorderStyleForString: (NSString *) value;
 
 @end
