@@ -15,9 +15,10 @@
 }
 
 -(void) renderProperty: (NSString *) property withStyle: (BYStyle *) style withOperation: (BYRenderOperation) operation {
-    if([style hasProperty: property]) {
+    if([style hasProperty: property] && ![style hasRenderedProperty: property]) {
         id value = [style valueForProperty: property];
         operation(value);
+        [style setRenderedProperty: property];
     }
 }
 

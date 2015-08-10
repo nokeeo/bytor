@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "BYToken.h"
+#import "BYStyleProperty.h"
 
 @interface BYStyle : NSObject
 
@@ -15,5 +16,8 @@
 
 -(BOOL) hasProperty: (NSString *) property;
 -(id) valueForProperty: (NSString *) name;
+
+-(BOOL) hasRenderedProperty: (NSString *) property;
+-(void) setRenderedProperty: (NSString *) property;
 
 @end

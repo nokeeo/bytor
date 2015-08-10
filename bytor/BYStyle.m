@@ -26,8 +26,8 @@
 }
 
 -(void) addStyleProperty: (NSString *) name value: (NSArray *) valueTokens {
-    [self.properties setObject: valueTokens forKey: name];
-    NSLog(@"%@", self.properties);
+    BYStyleProperty *newProperty = [[BYStyleProperty alloc] initWithName: name withValues: valueTokens];
+    [self.properties setObject: newProperty forKey: name];
 }
 
 -(BOOL) hasProperty: (NSString *) property {
@@ -35,21 +35,22 @@
 }
 
 -(id) valueForProperty:(NSString *) name {
-    NSArray *collection = [self.properties objectForKey: name];
-    if(collection) {
-        if([collection count] > 1) {
-            NSMutableArray *objcValues = [NSMutableArray array];
-            for(BYToken *token in collection) {
-                [objcValues addObject: [token objcValue]];
-            }
-            return objcValues;
-        }
-        else if([collection count] > 0){
-            return [[collection objectAtIndex: 0] objcValue];
-        }
+    return [[self.properties objectForKey: name] value];
+}
+
+-(BOOL) hasRenderedProperty:(NSString *)property {
+    if([self hasProperty: property]) {
+        BYStyleProperty *styleProperty = [self.properties objectForKey: property];
+        return [styleProperty isRendered];
     }
-    return nil;
-    //return [[self.properties valueForKey: name] objcValue];
+    return NO;
+}
+
+-(void) setRenderedProperty:(NSString *)property {
+    if([self hasProperty: property]) {
+        BYStyleProperty *styleProperty = [self.properties objectForKey: property];
+        styleProperty.isRendered = YES;
+    }
 }
 
 #pragma mark - Helper functions
