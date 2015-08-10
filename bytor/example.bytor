@@ -23,4 +23,5 @@ testButton {
     text-color-highlighted: #FF430F;
     image: "dog.png";
     tint-color: #0FB000;
+    background-image: "dog.png";
 }

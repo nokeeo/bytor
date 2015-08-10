@@ -83,6 +83,27 @@
         [view setImage: image forState: UIControlStateSelected];
     }];
     
+    //Background Image
+    [self renderProperty: @"background-image" withStyle: style withOperation:^(id value) {
+        UIImage *image = [UIImage imageNamed: value];
+        [view setBackgroundImage: image forState: UIControlStateNormal];
+    }];
+    
+    [self renderProperty: @"background-image-highlighted" withStyle: style withOperation:^(id value) {
+        UIImage *image = [UIImage imageNamed: value];
+        [view setBackgroundImage: image forState: UIControlStateHighlighted];
+    }];
+    
+    [self renderProperty: @"background-image-disabled" withStyle: style withOperation:^(id value) {
+        UIImage *image = [UIImage imageNamed: value];
+        [view setBackgroundImage: image forState: UIControlStateDisabled];
+    }];
+    
+    [self renderProperty: @"background-image-selected" withStyle: style withOperation:^(id value) {
+        UIImage *image = [UIImage imageNamed: value];
+        [view setBackgroundImage: image forState: UIControlStateSelected];
+    }];
+    
     [super renderView: view withStyle: style];
 }
 
