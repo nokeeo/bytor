@@ -12,58 +12,47 @@
 @implementation BYUIViewRenderer
 
 -(void) renderView:(UIView *)view withStyle:(BYStyle *)style {
-    NSString *property = @"opacity";
-    if([style hasProperty: property]) {
-        NSNumber *opacityValue = [style valueForProperty: property];
-        view.alpha = [opacityValue floatValue];
-    }
+    [self renderProperty: @"opacity" withStyle: style withOperation:^(id value) {
+        view.alpha = [value floatValue];
+    }];
     
-    property = @"background-color";
-    if([style hasProperty: property]) {
-        view.backgroundColor = [style valueForProperty: property];
-    }
+    [self renderProperty: @"background-color" withStyle: style withOperation:^(id value) {
+        view.backgroundColor = value;
+    }];
     
-    property = @"border-width";
-    if([style hasProperty: property]) {
-        view.layer.borderWidth = [[style valueForProperty: property] floatValue];
-    }
+    [self renderProperty: @"border-width" withStyle: style withOperation:^(id value) {
+        view.layer.borderWidth = [value floatValue];
+    }];
     
-    property = @"border-color";
-    if([style hasProperty: property]) {
-        view.layer.borderColor = [[style valueForProperty: property] CGColor];
-    }
+    [self renderProperty: @"border-color" withStyle: style withOperation:^(id value) {
+        view.layer.borderColor = [value CGColor];
+    }];
     
-    property = @"border-radius";
-    if([style hasProperty: property]) {
-        view.layer.cornerRadius = [[style valueForProperty: property] floatValue];
-    }
+    [self renderProperty: @"border-radius" withStyle: style withOperation:^(id value) {
+        view.layer.cornerRadius = [value floatValue];
+    }];
     
-    property = @"tint-color";
-    if([style hasProperty: property]) {
-        view.tintColor = [style valueForProperty: property];
-    }
+    [self renderProperty: @"tint-color" withStyle: style withOperation:^(id value) {
+        view.tintColor = value;
+    }];
     
-    property = @"shadow-color";
-    if([style hasProperty: property]) {
-        view.layer.shadowColor = [[style valueForProperty: property] CGColor];
-    }
+    [self renderProperty: @"shadow-color" withStyle: style withOperation:^(id value) {
+        view.layer.shadowColor = [value CGColor];
+    }];
     
-    property = @"shadow-opacity";
-    if([style hasProperty: property]) {
-        view.layer.shadowOpacity = [[style valueForProperty: property] floatValue];
-    }
+    [self renderProperty: @"shadow-opacity" withStyle: style withOperation:^(id value) {
+        view.layer.shadowOpacity = [value floatValue];
+    }];
     
-    property = @"shadow-radius";
-    if([style hasProperty: property]) {
-        view.layer.shadowRadius = [[style valueForProperty: property] floatValue];
-    }
+    [self renderProperty: @"shadow-radius" withStyle: style withOperation:^(id value) {
+        view.layer.shadowRadius = [value floatValue];
+    }];
     
-    property = @"shadow-offset";
-    if([style hasProperty: property]) {
-        NSArray *sizeValues = [style valueForProperty: property];
+    [self renderProperty: @"shadow-offset" withStyle: style withOperation:^(id value) {
+        NSArray *sizeValues = value;
         CGSize offset = [BYRendererUtility sizeFromValues: sizeValues];
         view.layer.shadowOffset = offset;
-    }
+    }];
 }
 
 @end

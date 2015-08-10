@@ -6,9 +6,8 @@
 //  Copyright (c) 2015 Eric Lee. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "BYBytorRenderer.h"
+#import "BYRenderer_protected.h"
 
-@interface BYUIViewRenderer : NSObject<BYBytorRenderer>
+@interface BYUIViewRenderer : BYRenderer
 
 @end

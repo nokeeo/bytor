@@ -7,7 +7,7 @@
 //
 
 #import "BYBytorRuntime.h"
-#import "BYBytorRenderer.h"
+#import "BYRenderer.h"
 
 @interface BYBytorRuntime()
 
@@ -45,7 +45,7 @@
     
     Class viewClass = view.class;
     while(viewClass) {
-        id<BYBytorRenderer> renderer = [self rendererForView: view];
+        BYRenderer *renderer = [self rendererForView: view];
         if(renderer) {
             [renderer renderView: view withStyle: style];
             break;
@@ -55,7 +55,7 @@
 }
 
 #pragma mark - Helper Functions
--(id<BYBytorRenderer>) rendererForView: (id) view {
+-(BYRenderer *) rendererForView: (id) view {
     NSString *className = [NSString stringWithFormat: @"BY%@Renderer", [view class]];
     Class renderClass = NSClassFromString(className);
     if(renderClass) {

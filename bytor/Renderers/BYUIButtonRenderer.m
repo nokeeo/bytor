@@ -14,70 +14,55 @@
 -(void) renderView:(UIButton *)view withStyle:(BYStyle *)style {
     [super renderView: view withStyle: style];
     
-    
     //Text Color
-    NSString *property = @"text-color";
-    if([style hasProperty: property]) {
-        [self setTitleColorForButton: view forState: UIControlStateNormal withStyle: style withProperty: property];
-    }
+    [self renderProperty: @"text-color" withStyle: style withOperation:^(id value) {
+        [view setTitleColor: value forState: UIControlStateNormal];
+    }];
     
-    property = @"text-color-highlighted";
-    if([style hasProperty: property]) {
-        [self setTitleColorForButton: view forState: UIControlStateHighlighted withStyle: style withProperty: property];
-    }
+    [self renderProperty: @"text-color-highlighted" withStyle: style withOperation:^(id value) {
+        [view setTitleColor: value forState: UIControlStateHighlighted];
+    }];
     
-    property = @"text-color-disabled";
-    if([style hasProperty: property]) {
-        [self setTitleColorForButton: view forState: UIControlStateDisabled withStyle: style withProperty: property];
-    }
+    [self renderProperty: @"text-color-disabled" withStyle: style withOperation:^(id value) {
+        [view setTitleColor: value forState: UIControlStateDisabled];
+    }];
     
-    property = @"text-color-selected";
-    if([style hasProperty: property]) {
-        [self setTitleColorForButton: view forState: UIControlStateSelected withStyle: style withProperty: property];
-    }
+    [self renderProperty: @"text-color-selected" withStyle: style withOperation:^(id value) {
+        [view setTitleColor: value forState: UIControlStateSelected];
+    }];
     
     //Text Shadow Color
-    property = @"text-shadow-color";
-    if([style hasProperty: property]) {
-        [self setTitleShadowColorForButton: view forState: UIControlStateNormal withStyle: style withProperty: property];
-    }
+    [self renderProperty: @"text-shadow-color" withStyle: style withOperation:^(id value) {
+        [view setTitleShadowColor: value forState: UIControlStateNormal];
+    }];
     
-    property = @"text-shadow-color-highlighted";
-    if([style hasProperty: property]) {
-        [self setTitleShadowColorForButton: view forState: UIControlStateHighlighted withStyle: style withProperty: property];
-    }
+    [self renderProperty: @"text-shadow-color-highlighted" withStyle: style withOperation:^(id value) {
+        [view setTitleShadowColor: value forState: UIControlStateHighlighted];
+    }];
     
-    property = @"text-shadow-color-disabled";
-    if([style hasProperty: property]) {
-        [self setTitleShadowColorForButton: view forState: UIControlStateDisabled withStyle: style withProperty: property];
-    }
+    [self renderProperty: @"text-shadow-color-disabled" withStyle: style withOperation:^(id value) {
+        [view setTitleShadowColor: value forState: UIControlStateDisabled];
+    }];
     
-    property = @"text-shadow-color-selected";
-    if([style hasProperty: property]) {
-        [self setTitleShadowColorForButton: view forState: UIControlStateSelected withStyle: style withProperty: property];
-    }
+    [self renderProperty: @"text-shadow-color-selected" withStyle: style withOperation:^(id value) {
+        [view setTitleShadowColor: value forState: UIControlStateSelected];
+    }];
     
     //Padding
-    property = @"padding";
-    if([style hasProperty: property]) {
-        NSArray *values = [style valueForProperty: property];
-        UIEdgeInsets insets = [BYRendererUtility insetsFromValues: values];
+    [self renderProperty: @"padding" withStyle: style withOperation:^(id value) {
+        UIEdgeInsets insets = [BYRendererUtility insetsFromValues: value];
         view.contentEdgeInsets = insets;
-    }
+    }];
     
-    property = @"title-padding";
-    if([style hasProperty: property]) {
-        NSArray *values = [style valueForProperty: property];
-        UIEdgeInsets insets = [BYRendererUtility insetsFromValues: values];
+    [self renderProperty: @"title-padding" withStyle: style withOperation:^(id value) {
+        UIEdgeInsets insets = [BYRendererUtility insetsFromValues: value];
         view.titleEdgeInsets = insets;
-    }
+    }];
     
-    property = @"image-padding";
-    if([style hasProperty: property]) {
-        NSArray *values = [style valueForProperty: property];
-        UIEdgeInsets insets = [BYRendererUtility insetsFromValues: values];
+    [self renderProperty: @"image-padding" withStyle: style withOperation:^(id value) {
+        UIEdgeInsets insets = [BYRendererUtility insetsFromValues: value];
         view.imageEdgeInsets = insets;
-    }
+    }];
 }
 
 #pragma mark - Helper Functions

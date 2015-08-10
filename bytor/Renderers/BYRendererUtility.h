@@ -13,5 +13,6 @@
 
 +(CGSize) sizeFromValues: (NSArray *) values;
 +(UIEdgeInsets) insetsFromValues: (NSArray *) values;
++(NSTextAlignment) textAlignmentForString: (NSString *) value;
 
 @end

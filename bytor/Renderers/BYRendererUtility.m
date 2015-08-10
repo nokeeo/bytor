@@ -35,4 +35,23 @@
     return UIEdgeInsetsZero;
 }
 
++(NSTextAlignment) textAlignmentForString: (NSString *) value {
+    if([value isEqual: @"left"]) {
+        return NSTextAlignmentLeft;
+    }
+    else if([value isEqual: @"center"]) {
+        return NSTextAlignmentCenter;
+    }
+    else if([value isEqual: @"right"]) {
+        return NSTextAlignmentRight;
+    }
+    else if([value isEqual: @"justified"]) {
+        return NSTextAlignmentJustified;
+    }
+    else if([value isEqual: @"natural"]) {
+        return NSTextAlignmentNatural;
+    }
+    return -1;
+}
+
 @end

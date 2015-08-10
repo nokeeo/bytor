@@ -1,5 +1,5 @@
 //
-//  BytorRenderer.h
+//  BYRenderer.h
 //  bytor
 //
 //  Created by Eric Lee on 8/9/15.
@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "BYStyle.h"
 
-@protocol BYBytorRenderer <NSObject>
+typedef void (^BYRenderOperation)(id value);
+
+@interface BYRenderer : NSObject
 
 -(void) renderView:(UIView *) view withStyle: (BYStyle *) style;
 
