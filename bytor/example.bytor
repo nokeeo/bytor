@@ -19,9 +19,6 @@ testLabel {
 }
 
 testButton {
-    text-color: #0FB000;
-    text-color-highlighted: #FF430F;
-    image: "dog.png";
-    tint-color: #0FB000;
-    background-image: "dog.png";
+    background-color: #0030CC;
+    vertical-align: "bottom";
 }

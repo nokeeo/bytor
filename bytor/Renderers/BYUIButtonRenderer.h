@@ -7,8 +7,9 @@
 //
 
 #import "BYUIViewRenderer.h"
+#import "BYUIControlRenderer.h"
 
-@interface BYUIButtonRenderer : BYUIViewRenderer
+@interface BYUIButtonRenderer : BYUIControlRenderer
 
 -(void) renderView:(UIButton *)view withStyle:(BYStyle *)style;
 

@@ -27,7 +27,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Mc-NV-oPm">
-                                <rect key="frame" x="24" y="307" width="79" height="30"/>
+                                <rect key="frame" x="24" y="307" width="79" height="67"/>
                                 <state key="normal" title="Test Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>

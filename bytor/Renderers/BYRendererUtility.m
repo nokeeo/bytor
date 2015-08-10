@@ -54,4 +54,34 @@
     return -1;
 }
 
++(UIControlContentHorizontalAlignment) horizontalAlignmentForString:(NSString *)value {
+    if([value isEqual: @"center"]) {
+        return UIControlContentHorizontalAlignmentCenter;
+    }
+    else if([value isEqual: @"right"]) {
+        return UIControlContentHorizontalAlignmentRight;
+    }
+    else if([value isEqual: @"fill"]) {
+        return UIControlContentHorizontalAlignmentFill;
+    }
+    else {
+        return UIControlContentHorizontalAlignmentLeft;
+    }
+}
+
++(UIControlContentVerticalAlignment) verticalAlignmentForString:(NSString *)value {
+    if([value isEqual: @"center"]) {
+        return UIControlContentVerticalAlignmentCenter;
+    }
+    else if([value isEqual: @"bottom"]) {
+        return UIControlContentVerticalAlignmentBottom;
+    }
+    else if([value isEqual: @"fill"]) {
+        return UIControlContentVerticalAlignmentFill;
+    }
+    else {
+        return UIControlContentVerticalAlignmentTop;
+    }
+}
+
 @end

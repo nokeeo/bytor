@@ -25,6 +25,7 @@
 		BE4D67CF1B783F8B00B438A3 /* dog.png in Resources */ = {isa = PBXBuildFile; fileRef = BE4D67CE1B783F8B00B438A3 /* dog.png */; };
 		BE4D67D21B7844A900B438A3 /* BYRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D67D11B7844A900B438A3 /* BYRenderer.m */; };
 		BE4D67D61B785BB400B438A3 /* BYStyleProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D67D51B785BB400B438A3 /* BYStyleProperty.m */; };
+		BE4D67D91B7869BF00B438A3 /* BYUIControlRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D67D81B7869BF00B438A3 /* BYUIControlRenderer.m */; };
 		BE80D8DB1B3E5FCC001A0E91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D8DA1B3E5FCC001A0E91 /* main.m */; };
 		BE80D8DE1B3E5FCC001A0E91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D8DD1B3E5FCC001A0E91 /* AppDelegate.m */; };
 		BE80D8E11B3E5FCC001A0E91 /* bytor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE80D8DF1B3E5FCC001A0E91 /* bytor.xcdatamodeld */; };
@@ -93,6 +94,8 @@
 		BE4D67D31B784B4B00B438A3 /* BYRenderer_protected.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYRenderer_protected.h; sourceTree = "<group>"; };
 		BE4D67D41B785BB400B438A3 /* BYStyleProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYStyleProperty.h; sourceTree = "<group>"; };
 		BE4D67D51B785BB400B438A3 /* BYStyleProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYStyleProperty.m; sourceTree = "<group>"; };
+		BE4D67D71B7869BF00B438A3 /* BYUIControlRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYUIControlRenderer.h; path = Renderers/BYUIControlRenderer.h; sourceTree = "<group>"; };
+		BE4D67D81B7869BF00B438A3 /* BYUIControlRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYUIControlRenderer.m; path = Renderers/BYUIControlRenderer.m; sourceTree = "<group>"; };
 		BE80D8D51B3E5FCC001A0E91 /* bytor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bytor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE80D8D91B3E5FCC001A0E91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE80D8DA1B3E5FCC001A0E91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -196,6 +199,8 @@
 				BE4D67C31B77220900B438A3 /* BYUIViewRenderer.m */,
 				BE4D67C81B7748C300B438A3 /* BYUILabelRenderer.h */,
 				BE4D67C91B7748C300B438A3 /* BYUILabelRenderer.m */,
+				BE4D67D71B7869BF00B438A3 /* BYUIControlRenderer.h */,
+				BE4D67D81B7869BF00B438A3 /* BYUIControlRenderer.m */,
 				BE4D67CB1B78328B00B438A3 /* BYUIButtonRenderer.h */,
 				BE4D67CC1B78328B00B438A3 /* BYUIButtonRenderer.m */,
 				BE4D67C51B773D3F00B438A3 /* BYRendererUtility.h */,
@@ -436,6 +441,7 @@
 				BE4D679B1B75BB5700B438A3 /* BYBytorRuntime.m in Sources */,
 				BE80D8E11B3E5FCC001A0E91 /* bytor.xcdatamodeld in Sources */,
 				BE4D67B21B75DA9100B438A3 /* BYColorRecognizer.m in Sources */,
+				BE4D67D91B7869BF00B438A3 /* BYUIControlRenderer.m in Sources */,
 				BE80D8DE1B3E5FCC001A0E91 /* AppDelegate.m in Sources */,
 				BE4D67981B75A52000B438A3 /* BYStringRecognizer.m in Sources */,
 				BE4D67AF1B75DA7100B438A3 /* BYHexColorToken.m in Sources */,

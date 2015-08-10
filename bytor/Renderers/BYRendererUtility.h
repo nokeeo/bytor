@@ -14,5 +14,7 @@
 +(CGSize) sizeFromValues: (NSArray *) values;
 +(UIEdgeInsets) insetsFromValues: (NSArray *) values;
 +(NSTextAlignment) textAlignmentForString: (NSString *) value;
++(UIControlContentHorizontalAlignment) horizontalAlignmentForString: (NSString *) value;
++(UIControlContentVerticalAlignment) verticalAlignmentForString: (NSString *) value;
 
 @end
