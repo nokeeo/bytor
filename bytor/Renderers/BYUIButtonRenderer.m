@@ -12,8 +12,6 @@
 @implementation BYUIButtonRenderer
 
 -(void) renderView:(UIButton *)view withStyle:(BYStyle *)style {
-    [super renderView: view withStyle: style];
-    
     //Text Color
     [self renderProperty: @"text-color" withStyle: style withOperation:^(id value) {
         [view setTitleColor: value forState: UIControlStateNormal];
@@ -63,18 +61,8 @@
         UIEdgeInsets insets = [BYRendererUtility insetsFromValues: value];
         view.imageEdgeInsets = insets;
     }];
-}
-
-#pragma mark - Helper Functions
-
--(void) setTitleColorForButton:(UIButton *) button forState:(UIControlState)state withStyle: (BYStyle *) style withProperty: (NSString *) property {
-    UIColor *color = [style valueForProperty: property];
-    [button setTitleColor: color forState: state];
-}
-
--(void) setTitleShadowColorForButton: (UIButton *) button forState: (UIControlState) state withStyle: (BYStyle *) style withProperty: (NSString *) property {
-    UIColor *color = [style valueForProperty: property];
-    [button setTitleShadowColor: color forState: state];
+    
+    [super renderView: view withStyle: style];
 }
 
 @end

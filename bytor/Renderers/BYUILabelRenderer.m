@@ -12,8 +12,6 @@
 @implementation BYUILabelRenderer
 
 -(void) renderView:(UILabel *)view withStyle:(BYStyle *)style {
-    [super renderView: view withStyle: style];
-    
     [self renderProperty: @"text-size" withStyle: style withOperation:^(id value) {
         UIFont *curFont = view.font;
         view.font = [UIFont fontWithName: curFont.familyName size: [value floatValue]];
@@ -34,6 +32,8 @@
     [self renderProperty: @"text-color" withStyle: style withOperation:^(id value) {
         view.textColor = value;
     }];
+    
+    [super renderView: view withStyle: style];
 }
 
 @end
