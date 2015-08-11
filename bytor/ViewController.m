@@ -53,7 +53,11 @@
     NSString *bytorFilePath = [[NSBundle mainBundle] pathForResource: @"example" ofType: @".bytor"];
     NSString *bytorCode = [NSString stringWithContentsOfFile: bytorFilePath encoding: NSUTF8StringEncoding error: nil];
     
-    BYTokenStream *tokenStream = [tokenizer tokenize: bytorCode];
+    NSError *tokenizeError;
+    BYTokenStream *tokenStream = [tokenizer tokenize: bytorCode error: &tokenizeError];
+    if(tokenizeError) {
+        NSLog(@"ERROR: %@", tokenizeError.localizedDescription);
+    }
     
     BYBytorParser *parser = [[BYBytorParser alloc] init];
     BYBytorRuntime *runtime = [parser parse: tokenStream];

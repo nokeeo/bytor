@@ -30,10 +30,11 @@
 
 #pragma mark - Public methods
 
--(BYTokenStream *) tokenize:(NSString *)inputString {
+-(BYTokenStream *) tokenize:(NSString *)inputString error: (NSError **) errorPtr {
     BYTokenStream *tokens = [[BYTokenStream alloc] init];
     
     NSInteger currentCharPosition = 0;
+    NSInteger currentLine = 1;
     
     while(currentCharPosition < inputString.length) {
         BOOL tokenFound = NO;
@@ -45,6 +46,7 @@
             if(token) {
                 tokenFound = YES;
                 [tokens addToken: token];
+                currentLine += [self numberOfLinesBetween: currentCharPosition end: currentCharPosition + token.length withString: inputString];
                 currentCharPosition += token.length;
                 
                 break;
@@ -57,6 +59,7 @@
                 BYToken *token = [ignoreRecognizer scanNextTokenIn: inputString position: currentCharPosition];
                 if(token) {
                     tokenFound = YES;
+                    currentLine += [self numberOfLinesBetween: currentCharPosition end: currentCharPosition + token.length withString: inputString];
                     currentCharPosition += token.length;
                     break;
                 }
@@ -65,9 +68,16 @@
         
         //If it is still not found print an error message
         if(!tokenFound) {
-            char errorChar = [inputString characterAtIndex: currentCharPosition];
-            NSString *errorMessage = [NSString stringWithFormat: @"Unexpected character '%c' at %li", errorChar, currentCharPosition];
-            NSLog(@"%@", errorMessage);
+            if(errorPtr) {
+                char errorChar = [inputString characterAtIndex: currentCharPosition];
+                NSInteger errorLinePos = [self linePosInString: inputString forParsePos: currentCharPosition];
+                NSString *errorMessage = [NSString stringWithFormat: @"Unexpected character '%c' at Line: %li:%li", errorChar, currentLine, errorLinePos];
+                NSDictionary *userInfo = @{
+                                            NSLocalizedDescriptionKey : errorMessage
+                                         };
+                *errorPtr = [NSError errorWithDomain: @"com.EricLee.bytor" code: 2112 userInfo: userInfo];
+            }
+            
             break;
         }
     }
@@ -81,6 +91,30 @@
 
 -(void) addIgnoredTokenRecognizers:(id<BYTokenRecognizer>)recognizer {
     [self.ignoredTokenRecognizers addObject: recognizer];
+}
+
+#pragma mark - Helper Function
+-(NSInteger) numberOfLinesBetween: (NSInteger) start end: (NSInteger) end withString: (NSString *) value {
+    NSInteger numLines = 0;
+    NSInteger curPos = start;
+    while(curPos < end) {
+        if([value characterAtIndex: curPos] == '\n') {
+            numLines++;
+        }
+        curPos++;
+    }
+    return numLines;
+}
+
+-(NSInteger) linePosInString: (NSString *) value forParsePos: (NSInteger) parsePos {
+    NSInteger currentPos = parsePos;
+    while(currentPos > 0) {
+        if([value characterAtIndex: currentPos] == '\n') {
+            break;
+        }
+        currentPos--;
+    }
+    return parsePos - currentPos;
 }
 
 @end

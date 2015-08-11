@@ -12,7 +12,7 @@
 
 @interface BYTokenizer : NSObject
 
--(BYTokenStream *) tokenize: (NSString *) inputString;
+-(BYTokenStream *) tokenize: (NSString *) inputString error: (NSError **) errorPtr;
 -(void) addTokenRecognizer: (id<BYTokenRecognizer>) recognizer;
 -(void) addIgnoredTokenRecognizers: (id<BYTokenRecognizer>) recognizer;
 
