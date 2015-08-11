@@ -19,8 +19,6 @@
     
     NSRange range = [regex rangeOfFirstMatchInString: text options: NSMatchingReportProgress range: NSMakeRange(position, (text.length - position))];
     
-    NSLog(@"%lu", (unsigned long)range.length);
-    
     if(range.length > 0 && position == range.location) {
         return [[BYNumberToken alloc] initWith: [text substringWithRange: range] position: position];
     }

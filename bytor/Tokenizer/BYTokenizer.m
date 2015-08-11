@@ -47,7 +47,6 @@
                 [tokens addToken: token];
                 currentCharPosition += token.length;
                 
-                NSLog(@"%@", tokens);
                 break;
             }
         }

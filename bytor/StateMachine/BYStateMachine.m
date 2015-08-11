@@ -43,17 +43,13 @@
     if(keywordFinalState) {
         self.currentState = [keywordFinalState integerValue];
         [self runOperationWith: keywordTransition token: token];
-        NSLog(@"Moved states using %@", token);
-        NSLog(@"Current State: %ld", (long)[keywordFinalState integerValue]);
     }
     else if(classFinalState) {
         self.currentState = [classFinalState integerValue];
         [self runOperationWith: classTransition token: token];
-        NSLog(@"Moved states using %@", token);
-        NSLog(@"Current State: %ld", (long)[classFinalState integerValue]);
     }
     else {
-        NSLog(@"Transition not found for: %@", token);
+        NSLog(@"ERROR: Transition not found for: %@", token);
     }
 }
 
