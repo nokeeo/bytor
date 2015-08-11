@@ -125,10 +125,16 @@ typedef NS_ENUM(NSInteger, BytorState){
     return self;
 }
 
--(BYBytorRuntime *) parse: (BYTokenStream *) tokenStream {
+-(BYBytorRuntime *) parse: (BYTokenStream *) tokenStream error: (NSError **) error {
     while(tokenStream.hasNext) {
         BYToken *currentToken = [tokenStream nextToken];
-        [self.stateMachine consumeToken: currentToken];
+        
+        NSError *consumeError;
+        [self.stateMachine consumeToken: currentToken error: &consumeError];
+        if(consumeError) {
+            *error = consumeError;
+            break;
+        }
     }
     
     if([self.stateMachine isInFinalState]) {

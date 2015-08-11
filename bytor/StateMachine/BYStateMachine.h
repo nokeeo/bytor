@@ -16,7 +16,7 @@ typedef void (^BYTransitionOperation)(NSMutableDictionary*, BYToken*);
 -(void) addTransitionWith:(NSInteger) startState keyword:(NSString *) keyword finalState:(NSInteger) finalState operation: (BYTransitionOperation) TransitionOperation;
 -(void) addTransitionWith:(NSInteger) startState class: (Class) class finalState:(NSInteger) finalState operation: (BYTransitionOperation) TransitionOperation;
 
--(void) consumeToken: (BYToken *) token;
+-(void) consumeToken:(BYToken *)token error: (NSError **) error;
 
 -(void) setFinalStates: (NSArray *) finalStates;
 -(BOOL) isInFinalState;

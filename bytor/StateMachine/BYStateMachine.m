@@ -33,7 +33,7 @@
     return self;
 }
 
--(void) consumeToken:(BYToken *)token {
+-(void) consumeToken:(BYToken *)token error: (NSError **) error {
     BYTransition *keywordTransition = [[BYTransition alloc] initWith: self.currentState value: token.value];
     BYTransition *classTransition = [[BYTransition alloc] initWith: self.currentState value:[[token class] description]];
     
@@ -49,7 +49,12 @@
         [self runOperationWith: classTransition token: token];
     }
     else {
-        NSLog(@"ERROR: Transition not found for: %@", token);
+        if(error) {
+            NSString *errorMessage = [NSString stringWithFormat: @"Unexpected token '%@' at Line %li:%li", token.value, token.lineNumber, token.linePos];
+            *error = [NSError errorWithDomain: @"com.EricLee.bytor" code: 2112 userInfo: @{
+                                                                                          NSLocalizedDescriptionKey : errorMessage
+                                                                                          }];
+        }
     }
 }
 

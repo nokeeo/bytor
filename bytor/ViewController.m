@@ -60,7 +60,13 @@
     }
     
     BYBytorParser *parser = [[BYBytorParser alloc] init];
-    BYBytorRuntime *runtime = [parser parse: tokenStream];
+    
+    NSError *parseError;
+    BYBytorRuntime *runtime = [parser parse: tokenStream error: &parseError];
+    if(parseError) {
+        NSLog(@"ERROR: %@", parseError.localizedDescription);
+    }
+    
     [runtime applyStyle: @"subStyle" toView: self.testView];
     [runtime applyStyle: @"testLabel" toView: self.testLabel];
     [runtime applyStyle: @"testButton" toView: self.testButton];

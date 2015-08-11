@@ -12,6 +12,6 @@
 
 @interface BYBytorParser : NSObject
 
--(BYBytorRuntime *) parse: (BYTokenStream *) tokenStream;
+-(BYBytorRuntime *) parse: (BYTokenStream *) tokenStream error: (NSError **) error;
 
 @end

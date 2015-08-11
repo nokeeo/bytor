@@ -2,10 +2,10 @@ testVar = 15;
 font = "Trebuchet-BoldItalic";
 fontColor = #0FB000;
 
-superStyle {
+superStyle {{
     background-color: fontColor;
     border-radius: 20;
-    border-color: fontColor;@
+    border-color: fontColor;
 }
 
 superStyle2 {

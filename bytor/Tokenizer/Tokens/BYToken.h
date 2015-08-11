@@ -12,6 +12,8 @@
 
 @property NSString *value;
 @property NSInteger startPosition;
+@property NSInteger lineNumber;
+@property NSInteger linePos;
 
 -(id) initWith:(NSString *) value position: (NSInteger)startPosition;
 -(NSInteger) length;
