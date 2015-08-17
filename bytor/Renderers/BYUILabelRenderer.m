@@ -12,24 +12,24 @@
 @implementation BYUILabelRenderer
 
 -(void) renderView:(UILabel *)view withStyle:(BYStyle *)style {
-    [self renderProperty: @"text-size" withStyle: style withOperation:^(id value) {
+    [self renderProperty: @"text-size" withStyle: style withTypeClasses: @[[NSNumber class]] withOperation:^(id value) {
         UIFont *curFont = view.font;
         view.font = [UIFont fontWithName: curFont.familyName size: [value floatValue]];
     }];
     
-    [self renderProperty: @"font" withStyle: style withOperation:^(id value) {
+    [self renderProperty: @"font" withStyle: style withTypeClasses: @[[NSString class]] withOperation:^(id value) {
         UIFont *curFont = view.font;
         view.font = [UIFont fontWithName: value size: curFont.pointSize];
     }];
     
-    [self renderProperty: @"text-align" withStyle: style withOperation:^(id value) {
+    [self renderProperty: @"text-align" withStyle: style withTypeClasses: @[[NSString class]] withOperation:^(id value) {
         NSTextAlignment textAlign = [BYRendererUtility textAlignmentForString: value];
         if(textAlign) {
             view.textAlignment = textAlign;
         }
     }];
     
-    [self renderProperty: @"text-color" withStyle: style withOperation:^(id value) {
+    [self renderProperty: @"text-color" withStyle: style withTypeClasses: @[[UIColor class]] withOperation:^(id value) {
         view.textColor = value;
     }];
     
