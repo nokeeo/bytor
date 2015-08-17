@@ -12,11 +12,11 @@
 @implementation BYUIControlRenderer
 
 -(void) renderView:(UIControl *)view withStyle:(BYStyle *)style {
-    [self renderProperty: @"horizontal-align" withStyle: style withOperation:^(id value) {
+    [self renderProperty: @"horizontal-align" withStyle: style withTypeClasses: @[[NSString class]] withOperation:^(id value) {
         view.contentHorizontalAlignment = [BYRendererUtility horizontalAlignmentForString: value];
     }];
     
-    [self renderProperty: @"vertical-align" withStyle: style withOperation:^(id value) {
+    [self renderProperty: @"vertical-align" withStyle: style  withTypeClasses: @[[NSString class]] withOperation:^(id value) {
         view.contentVerticalAlignment = [BYRendererUtility verticalAlignmentForString: value];
     }];
     
