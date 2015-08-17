@@ -1,5 +1,5 @@
 # Bytor
-A CSS like programming language for iOS.
+A CSS like styling language for iOS.
 
 ## Installation
 1. Navigate to project directory
