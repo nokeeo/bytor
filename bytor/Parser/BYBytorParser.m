@@ -154,8 +154,12 @@ typedef NS_ENUM(NSInteger, BytorState){
     __weak typeof(self) weakSelf = self;
     [self.stateMachine addTransitionWith: start class: [BYWordToken class] finalState: end operation:^(NSMutableDictionary *context, BYToken *token) {
         BYToken *variableValue = [weakSelf.bytorRuntime getTokenValueForVariable: token.value];
+        BYToken *copy = [variableValue copy];
+        copy.lineNumber = token.lineNumber;
+        copy.linePos = token.linePos;
+        
         if(variableValue) {
-            operation(context, variableValue);
+            operation(context, copy);
         }
     }];
 }

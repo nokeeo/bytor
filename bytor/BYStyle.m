@@ -64,4 +64,12 @@
     }
 }
 
+-(NSInteger) lineNumberForProperty: (NSString *) property {
+    if([self hasProperty: property]) {
+        BYStyleProperty *styleProperty = [self.properties objectForKey: property];
+        return styleProperty.lineNumber;
+    }
+    return -1;
+}
+
 @end

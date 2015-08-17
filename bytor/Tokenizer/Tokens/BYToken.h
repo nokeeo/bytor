@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BYToken : NSObject
+@interface BYToken : NSObject<NSCopying> 
 
 @property NSString *value;
 @property NSInteger startPosition;

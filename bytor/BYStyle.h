@@ -23,4 +23,6 @@
 -(BOOL) hasRenderedProperty: (NSString *) property;
 -(void) setRenderedProperty: (NSString *) property;
 
+-(NSInteger) lineNumberForProperty: (NSString *) property;
+
 @end

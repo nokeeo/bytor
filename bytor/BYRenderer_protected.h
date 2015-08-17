@@ -11,6 +11,7 @@
 @interface BYRenderer()
 
 -(void) renderProperty: (NSString *) property withStyle: (BYStyle *) style withOperation: (BYRenderOperation) operation;
+-(void) renderProperty: (NSString *) property withStyle: (BYStyle *) style withTypeClasses: (NSArray *) types withOperation: (BYRenderOperation) operation;
 
 @end
 

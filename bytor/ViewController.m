@@ -67,10 +67,10 @@
         NSLog(@"ERROR: %@", parseError.localizedDescription);
     }
     
-    [runtime applyStyle: @"subStyle" toView: self.testView];
-    [runtime applyStyle: @"testLabel" toView: self.testLabel];
-    [runtime applyStyle: @"testButton" toView: self.testButton];
-    [runtime applyStyle: @"testTextField" toView: self.testTextField];
+    [runtime applyStyle: @"superStyle" toView: self.testView];
+//    [runtime applyStyle: @"testLabel" toView: self.testLabel];
+//    [runtime applyStyle: @"testButton" toView: self.testButton];
+//    [runtime applyStyle: @"testTextField" toView: self.testTextField];
     
 }
 

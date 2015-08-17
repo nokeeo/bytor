@@ -46,7 +46,7 @@
             if(token) {
                 tokenFound = YES;
                 [tokens addToken: token];
-                token.lineNumber = currentLine = currentLine;
+                token.lineNumber = currentLine;
                 token.linePos = [self linePosInString: inputString forParsePos: currentCharPosition];
                 currentLine += [self numberOfLinesBetween: currentCharPosition end: currentCharPosition + token.length withString: inputString];
                 currentCharPosition += token.length;

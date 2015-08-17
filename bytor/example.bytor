@@ -3,9 +3,12 @@ font = "Trebuchet-BoldItalic";
 fontColor = #0FB000;
 
 superStyle {
-    background-color: fontColor;
+    background-color: 20;
     border-radius: 20;
     border-color: fontColor;
+    shadow-color: #FF5C0A;
+    shadow-opacity: 1;
+    shadow-offset: testVar testVar testVar;
 }
 
 superStyle2 {

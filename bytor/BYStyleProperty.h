@@ -12,6 +12,7 @@
 
 -(id) initWithName: (NSString *) name withValues: (NSArray *) values;
 -(id) value;
+-(NSInteger) lineNumber;
 
 @property BOOL isRendered;
 

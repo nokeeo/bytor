@@ -37,4 +37,13 @@
     return self.value;
 }
 
+#pragma mark - NSCopying Protocol
+-(id) copyWithZone:(NSZone *)zone {
+    id copy = [[[self class] alloc] initWith: self.value position: self.startPosition];
+    [copy setLineNumber: self.lineNumber];
+    [copy setLinePos: self.linePos];
+    
+    return copy;
+}
+
 @end

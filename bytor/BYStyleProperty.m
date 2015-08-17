@@ -43,4 +43,13 @@
     return nil;
 }
 
+-(NSInteger) lineNumber {
+    if([self.styleValues count] > 0) {
+        BYToken *token = [self.styleValues firstObject];
+        return token.lineNumber;
+    }
+    
+    return -1;
+}
+
 @end
