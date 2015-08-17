@@ -20,7 +20,7 @@ subStyle | superStyle, superStyle2 {
     border-width: 2;
 }
 
-/*testView {
+testView {
     border-radius: 20;
     border-width: 10.5;
     border-color: #0030CC;
@@ -28,8 +28,7 @@ subStyle | superStyle, superStyle2 {
     opacity:.75;
     shadow-color: #FF5C0A;
     shadow-opacity: 1;
-    shadow-offset: testVar testVar;
-    background-image: "dog.png";
+    shadow-offset: 40 testVar;
 }
 
 testLabel {
@@ -48,4 +47,4 @@ testTextField {
     text-size: 21;
     text-color: fontColor;
     text-alignment: "center";
-}*/
+}

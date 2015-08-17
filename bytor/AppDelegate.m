@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "BYBytor.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    NSString *filePath = [[NSBundle mainBundle] pathForResource: @"example" ofType: @"bytor"];
+    [[BYBytor sharedInstance] stylesFromFilePath: filePath];
     return YES;
 }
 

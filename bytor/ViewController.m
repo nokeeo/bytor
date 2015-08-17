@@ -7,17 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "BYTokenizer.h"
-#import "BYKeywordRecognizer.h"
-#import "BYWordRecognizer.h"
-#import "BYNumberRecognizer.h"
-#import "BYWhiteSpaceRecognizer.h"
-#import "BYCommentRecognizer.h"
-#import "BYStringRecognizer.h"
-#import "BYColorRecognizer.h"
-
-#import "BYTokenStream.h"
-#import "BYBytorParser.h"
+#import "UIView+BYBytor.h"
 
 @interface ViewController ()
 
@@ -32,46 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    BYTokenizer *tokenizer = [[BYTokenizer alloc] init];
-    
-    [tokenizer addTokenRecognizer: [[BYNumberRecognizer alloc] init]];
-    [tokenizer addTokenRecognizer: [[BYKeywordRecognizer alloc] initWith: @"="]];
-    [tokenizer addTokenRecognizer: [[BYKeywordRecognizer alloc] initWith: @";"]];
-    [tokenizer addTokenRecognizer: [[BYKeywordRecognizer alloc] initWith: @"{"]];
-    [tokenizer addTokenRecognizer: [[BYKeywordRecognizer alloc] initWith: @"}"]];
-    [tokenizer addTokenRecognizer: [[BYKeywordRecognizer alloc] initWith: @":"]];
-    [tokenizer addTokenRecognizer: [[BYKeywordRecognizer alloc] initWith: @"|"]];
-    [tokenizer addTokenRecognizer: [[BYKeywordRecognizer alloc] initWith: @","]];
-    [tokenizer addTokenRecognizer: [[BYWordRecognizer alloc] init]];
-    [tokenizer addTokenRecognizer: [[BYStringRecognizer alloc] init]];
-    [tokenizer addTokenRecognizer: [[BYColorRecognizer alloc] init]];
-    
-    [tokenizer addIgnoredTokenRecognizers: [[BYCommentRecognizer alloc] init]];
-    [tokenizer addIgnoredTokenRecognizers: [[BYWhiteSpaceRecognizer alloc] init]];
-    
-    NSString *bytorFilePath = [[NSBundle mainBundle] pathForResource: @"example" ofType: @".bytor"];
-    NSString *bytorCode = [NSString stringWithContentsOfFile: bytorFilePath encoding: NSUTF8StringEncoding error: nil];
-    
-    NSError *tokenizeError;
-    BYTokenStream *tokenStream = [tokenizer tokenize: bytorCode error: &tokenizeError];
-    if(tokenizeError) {
-        NSLog(@"ERROR: %@", tokenizeError.localizedDescription);
-    }
-    
-    BYBytorParser *parser = [[BYBytorParser alloc] init];
-    
-    NSError *parseError;
-    BYBytorRuntime *runtime = [parser parse: tokenStream error: &parseError];
-    if(parseError) {
-        NSLog(@"ERROR: %@", parseError.localizedDescription);
-    }
-    
-    [runtime applyStyle: @"superStyle" toView: self.testView];
-//    [runtime applyStyle: @"testLabel" toView: self.testLabel];
-//    [runtime applyStyle: @"testButton" toView: self.testButton];
-//    [runtime applyStyle: @"testTextField" toView: self.testTextField];
-    
+    [self.testView setStyle: @"testView"];
 }
 
 - (void)didReceiveMemoryWarning {
