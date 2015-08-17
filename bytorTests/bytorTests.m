@@ -1,19 +1,19 @@
 //
-//  bytorTests.m
-//  bytorTests
+//  BytorTests.m
+//  BytorTests
 //
-//  Created by Eric Lee on 6/27/15.
+//  Created by Eric Lee on 8/16/15.
 //  Copyright (c) 2015 Eric Lee. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface bytorTests : XCTestCase
+@interface BytorTests : XCTestCase
 
 @end
 
-@implementation bytorTests
+@implementation BytorTests
 
 - (void)setUp {
     [super setUp];

@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BE80D8D41B3E5FCC001A0E91"
-               BuildableName = "bytor.app"
-               BlueprintName = "bytor"
-               ReferencedContainer = "container:bytor.xcodeproj">
+               BlueprintIdentifier = "BE4D699D1B819ADB00B438A3"
+               BuildableName = "Bytor.framework"
+               BlueprintName = "Bytor"
+               ReferencedContainer = "container:Bytor.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BE80D8F01B3E5FCC001A0E91"
-               BuildableName = "bytorTests.xctest"
-               BlueprintName = "bytorTests"
-               ReferencedContainer = "container:bytor.xcodeproj">
+               BlueprintIdentifier = "BE4D69A81B819ADB00B438A3"
+               BuildableName = "BytorTests.xctest"
+               BlueprintName = "BytorTests"
+               ReferencedContainer = "container:Bytor.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BE80D8F01B3E5FCC001A0E91"
-               BuildableName = "bytorTests.xctest"
-               BlueprintName = "bytorTests"
-               ReferencedContainer = "container:bytor.xcodeproj">
+               BlueprintIdentifier = "BE4D69A81B819ADB00B438A3"
+               BuildableName = "BytorTests.xctest"
+               BlueprintName = "BytorTests"
+               ReferencedContainer = "container:Bytor.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BE80D8D41B3E5FCC001A0E91"
-            BuildableName = "bytor.app"
-            BlueprintName = "bytor"
-            ReferencedContainer = "container:bytor.xcodeproj">
+            BlueprintIdentifier = "BE4D699D1B819ADB00B438A3"
+            BuildableName = "Bytor.framework"
+            BlueprintName = "Bytor"
+            ReferencedContainer = "container:Bytor.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -72,16 +72,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BE80D8D41B3E5FCC001A0E91"
-            BuildableName = "bytor.app"
-            BlueprintName = "bytor"
-            ReferencedContainer = "container:bytor.xcodeproj">
+            BlueprintIdentifier = "BE4D699D1B819ADB00B438A3"
+            BuildableName = "Bytor.framework"
+            BlueprintName = "Bytor"
+            ReferencedContainer = "container:Bytor.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -91,16 +90,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BE80D8D41B3E5FCC001A0E91"
-            BuildableName = "bytor.app"
-            BlueprintName = "bytor"
-            ReferencedContainer = "container:bytor.xcodeproj">
+            BlueprintIdentifier = "BE4D699D1B819ADB00B438A3"
+            BuildableName = "Bytor.framework"
+            BlueprintName = "Bytor"
+            ReferencedContainer = "container:Bytor.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

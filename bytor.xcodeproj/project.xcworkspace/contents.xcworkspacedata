@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:bytor.xcodeproj">
+      location = "self:Bytor.xcodeproj">
    </FileRef>
 </Workspace>

@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>bytor.xcscheme</key>
+		<key>Bytor.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>BE80D8D41B3E5FCC001A0E91</key>
+		<key>BE4D699D1B819ADB00B438A3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BE80D8F01B3E5FCC001A0E91</key>
+		<key>BE4D69A81B819ADB00B438A3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
