@@ -17,6 +17,6 @@ FOUNDATION_EXPORT const unsigned char BytorVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <Bytor/PublicHeader.h>
 
 #import <Bytor/BYBytor.h>
-#import <UIView+BYBytor.h>
+#import <Bytor/UIView+BYBytor.h>
 
 

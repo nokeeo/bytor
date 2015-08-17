@@ -10,7 +10,7 @@
 		BE4D69A41B819ADB00B438A3 /* Bytor.h in Headers */ = {isa = PBXBuildFile; fileRef = BE4D69A31B819ADB00B438A3 /* Bytor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BE4D69AA1B819ADB00B438A3 /* Bytor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4D699E1B819ADB00B438A3 /* Bytor.framework */; };
 		BE4D69B11B819ADB00B438A3 /* BytorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D69B01B819ADB00B438A3 /* BytorTests.m */; };
-		BE4D6A021B819B0D00B438A3 /* BYBytor.h in Headers */ = {isa = PBXBuildFile; fileRef = BE4D69BA1B819B0C00B438A3 /* BYBytor.h */; };
+		BE4D6A021B819B0D00B438A3 /* BYBytor.h in Headers */ = {isa = PBXBuildFile; fileRef = BE4D69BA1B819B0C00B438A3 /* BYBytor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BE4D6A031B819B0D00B438A3 /* BYBytor.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D69BB1B819B0C00B438A3 /* BYBytor.m */; };
 		BE4D6A041B819B0D00B438A3 /* BYBytorRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = BE4D69BC1B819B0C00B438A3 /* BYBytorRuntime.h */; };
 		BE4D6A051B819B0D00B438A3 /* BYBytorRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D69BD1B819B0C00B438A3 /* BYBytorRuntime.m */; };
@@ -74,7 +74,7 @@
 		BE4D6A3F1B819B0D00B438A3 /* BYWhiteSpaceToken.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D69FD1B819B0D00B438A3 /* BYWhiteSpaceToken.m */; };
 		BE4D6A401B819B0D00B438A3 /* BYWordToken.h in Headers */ = {isa = PBXBuildFile; fileRef = BE4D69FE1B819B0D00B438A3 /* BYWordToken.h */; };
 		BE4D6A411B819B0D00B438A3 /* BYWordToken.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D69FF1B819B0D00B438A3 /* BYWordToken.m */; };
-		BE4D6A421B819B0D00B438A3 /* UIView+BYBytor.h in Headers */ = {isa = PBXBuildFile; fileRef = BE4D6A001B819B0D00B438A3 /* UIView+BYBytor.h */; };
+		BE4D6A421B819B0D00B438A3 /* UIView+BYBytor.h in Headers */ = {isa = PBXBuildFile; fileRef = BE4D6A001B819B0D00B438A3 /* UIView+BYBytor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BE4D6A431B819B0D00B438A3 /* UIView+BYBytor.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D6A011B819B0D00B438A3 /* UIView+BYBytor.m */; };
 /* End PBXBuildFile section */
 
@@ -365,6 +365,7 @@
 			files = (
 				BE4D6A1B1B819B0D00B438A3 /* BYStateMachine.h in Headers */,
 				BE4D6A021B819B0D00B438A3 /* BYBytor.h in Headers */,
+				BE4D6A421B819B0D00B438A3 /* UIView+BYBytor.h in Headers */,
 				BE4D6A3A1B819B0D00B438A3 /* BYStringToken.h in Headers */,
 				BE4D6A151B819B0D00B438A3 /* BYUILabelRenderer.h in Headers */,
 				BE4D6A131B819B0D00B438A3 /* BYUIControlRenderer.h in Headers */,
@@ -377,7 +378,6 @@
 				BE4D6A191B819B0D00B438A3 /* BYUIViewRenderer.h in Headers */,
 				BE4D6A381B819B0D00B438A3 /* BYNumberToken.h in Headers */,
 				BE4D6A251B819B0D00B438A3 /* BYCommentRecognizer.h in Headers */,
-				BE4D6A421B819B0D00B438A3 /* UIView+BYBytor.h in Headers */,
 				BE4D6A2E1B819B0D00B438A3 /* BYWhiteSpaceRecognizer.h in Headers */,
 				BE4D6A291B819B0D00B438A3 /* BYNumberRecognizer.h in Headers */,
 				BE4D6A0D1B819B0D00B438A3 /* BYRenderer.h in Headers */,
@@ -718,6 +718,7 @@
 				BE4D69B61B819ADB00B438A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE4D69B71B819ADB00B438A3 /* Build configuration list for PBXNativeTarget "BytorTests" */ = {
 			isa = XCConfigurationList;
@@ -726,6 +727,7 @@
 				BE4D69B91B819ADB00B438A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
